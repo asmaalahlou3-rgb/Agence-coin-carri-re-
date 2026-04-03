@@ -46,7 +46,6 @@
 
     <section id="accueil" class="bg-brand-blue text-white py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <span class="text-brand-gold uppercase tracking-widest font-semibold text-sm">B2B & Immobilier d'Affaires</span>
             <h1 class="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Transformez votre croissance en <span class="text-brand-gold">opportunité immobilière</span> stratégique.
             </h1>
@@ -54,7 +53,7 @@
                 Bureaux, commerces et espaces stratégiques. Nous trouvons l'emplacement qui propulsera votre entreprise au Maroc.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-brand-gold text-brand-blue px-8 py-4 font-bold text-lg hover:bg-brand-emerald hover:text-white transition shadow-lg">
+                <a href="#contact" class="bg-brand-gold text-brand-blue px-8 py-4 font-bold text-lg hover:bg-brand-emerald hover:text-white transition shadow-lg transform hover:-translate-y-1">
                     Échangeons sur votre projet
                 </a>
                 <a href="#approche" class="border border-white text-white px-8 py-4 font-bold text-lg hover:bg-white hover:text-brand-blue transition">
@@ -135,39 +134,67 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-brand-blue text-white">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <section id="contact" class="py-24 bg-brand-blue text-white relative overflow-hidden">
+        
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0 bg-repeat" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
             
             <div class="text-center mb-12">
-                <span class="text-brand-gold uppercase font-semibold text-sm tracking-wider">Passons à l'action</span>
-                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold">Confiez-nous votre recherche</h2>
-                <p class="mt-4 text-gray-300">Remplissez ce formulaire. Un conseiller vous rappellera sous 24h.</p>
+                <span class="text-brand-gold uppercase font-semibold text-sm tracking-wider">Offres Privées</span>
+                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold leading-tight">
+                    Ne laissez pas le local idéal <span class="text-brand-gold">filer chez vos concurrents</span>.
+                </h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto font-light">
+                    Remplissez le formulaire ci-dessous pour recevoir une **sélection exclusive de 3 biens "Off-Market"** en moins de 48h.
+                </p>
+                
+                <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <span class="text-brand-gold">✔</span> Diagnostic gratuit
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-brand-gold">✔</span> Zéro engagement
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-brand-gold">✔</span> 100% Confidentiel
+                    </div>
+                </div>
             </div>
 
-            <form class="bg-white text-gray-800 p-8 rounded-lg shadow-2xl space-y-6">
+            <form class="bg-white text-gray-800 p-8 md:p-10 rounded-lg shadow-2xl space-y-6 max-w-4xl mx-auto border-t-4 border-brand-gold">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-semibold mb-2">Nom Complet *</label>
-                        <input type="text" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald" placeholder="John Doe" required>
+                        <label class="block text-sm font-semibold mb-2 text-brand-blue">Nom Complet *</label>
+                        <input type="text" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald" placeholder="John Doe" required>
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold mb-2">Société *</label>
-                        <input type="text" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald" placeholder="Ma Société SA" required>
+                        <label class="block text-sm font-semibold mb-2 text-brand-blue">Société *</label>
+                        <input type="text" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald" placeholder="Ma Société SA" required>
                     </div>
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-2">Message</label>
-                    <textarea rows="4" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald" placeholder="Nous recherchons des bureaux de 200m² à Casablanca..."></textarea>
+                    <label class="block text-sm font-semibold mb-2 text-brand-blue">Message</label>
+                    <textarea rows="3" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald" placeholder="Nous recherchons des bureaux de 200m² à Casablanca..."></textarea>
                 </div>
-                <button type="submit" class="w-full bg-brand-gold text-brand-blue font-bold px-10 py-4 uppercase hover:bg-brand-emerald hover:text-white transition duration-300">
-                    Envoyer ma demande
-                </button>
+
+                <div class="text-center">
+                    <button type="submit" class="w-full bg-brand-gold text-brand-blue font-bold px-10 py-4 uppercase text-base tracking-wider hover:bg-brand-emerald hover:text-white transition duration-300 shadow-lg transform hover:-translate-y-1">
+                        Recevoir mes 3 opportunités off-market ➔
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4 flex items-center justify-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                        Vos informations sont protégées et 100% confidentielles.
+                    </p>
+                </div>
             </form>
 
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-500 py-10 text-center text-sm">
+    <footer class="bg-gray-900 text-gray-500 py-10 text-center text-sm border-t border-gray-800">
         <p class="font-serif text-brand-gold text-lg mb-2">Coin Carrière</p>
         <p>&copy; 2026 Coin Carrière Immobilier. Tous droits réservés.</p>
         <p class="mt-1">Casablanca - Marrakech - Fès - Tanger</p>
@@ -175,5 +202,7 @@
 
 </body>
 </html>
+                      
             
-               
+  
+         
