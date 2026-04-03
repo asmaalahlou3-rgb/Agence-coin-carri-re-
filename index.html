@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Carrière | Immobilier d'Entreprise Stratégique</title>
+    <title>Coin Carrière | Immobilier d'Entreprise au Maroc</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <script>
@@ -15,7 +16,6 @@
                     colors: {
                         'brand-blue': '#0B192C',
                         'brand-gold': '#D4AF37',
-                        'brand-gold-light': '#F3E5AB',
                         'brand-emerald': '#093A3E'
                     },
                     fontFamily: {
@@ -27,114 +27,99 @@
         }
     </script>
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
+<body class="font-sans bg-white text-gray-800">
 
-    <header class="bg-brand-blue text-white sticky top-0 z-50 shadow-lg" x-data="{ open: false }">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="font-serif text-2xl font-bold text-brand-gold">Coin Carrière</span>
-                </div>
-                
-                <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-semibold">
-                    <a href="#accueil" class="hover:text-brand-gold transition">Accueil</a>
-                    <a href="#approche" class="hover:text-brand-gold transition">Notre Approche</a>
-                    <a href="#villes" class="hover:text-brand-gold transition">Nos Secteurs</a>
-                    <a href="#contact" class="bg-brand-gold text-brand-blue px-5 py-2 rounded-sm hover:bg-white hover:text-brand-blue transition">Prendre Contact</a>
-                </nav>
-
-                <div class="md:hidden">
-                    <button @click="open = !open" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l18 18"></path>
-                        </svg>
-                    </button>
-                </div>
+    <header class="bg-brand-blue text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="font-serif text-2xl font-bold text-brand-gold">
+                Coin Carrière
             </div>
-        </div>
-
-        <div x-show="open" @click.away="open = false" class="md:hidden bg-brand-blue border-t border-gray-700">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                <a href="#accueil" class="block px-3 py-2 text-white hover:text-brand-gold">Accueil</a>
-                <a href="#approche" class="block px-3 py-2 text-white hover:text-brand-gold">Notre Approche</a>
-                <a href="#villes" class="block px-3 py-2 text-white hover:text-brand-gold">Nos Secteurs</a>
-                <a href="#contact" class="block px-3 py-2 bg-brand-gold text-brand-blue font-bold">Prendre Contact</a>
-            </div>
+            
+            <nav class="hidden md:flex space-x-8 text-sm uppercase font-semibold tracking-wider">
+                <a href="#accueil" class="hover:text-brand-gold transition">Accueil</a>
+                <a href="#approche" class="hover:text-brand-gold transition">Notre Approche</a>
+                <a href="#villes" class="hover:text-brand-gold transition">Nos Secteurs</a>
+                <a href="#contact" class="bg-brand-gold text-brand-blue px-4 py-2 rounded-sm hover:bg-white hover:text-brand-blue transition">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <section id="accueil" class="relative bg-brand-blue text-white py-24 lg:py-32 overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-repeat" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+    <section id="accueil" class="bg-brand-blue text-white py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <span class="text-brand-gold uppercase tracking-widest font-semibold text-sm">B2B & Immobilier d'Affaires</span>
+            <h1 class="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Transformez votre croissance en <span class="text-brand-gold">opportunité immobilière</span> stratégique.
+            </h1>
+            <p class="mt-6 text-xl text-gray-300 font-light max-w-3xl mx-auto">
+                Bureaux, commerces et espaces stratégiques. Nous trouvons l'emplacement qui propulsera votre entreprise au Maroc.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-brand-gold text-brand-blue px-8 py-4 font-bold text-lg hover:bg-brand-emerald hover:text-white transition shadow-lg">
+                    Échangeons sur votre projet
+                </a>
+                <a href="#approche" class="border border-white text-white px-8 py-4 font-bold text-lg hover:bg-white hover:text-brand-blue transition">
+                    En savoir plus
+                </a>
+            </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <span class="text-brand-gold uppercase tracking-widest font-semibold text-sm">B2B & Immobilier d'Affaires</span>
-                <h1 class="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    Transformez votre croissance en <span class="text-brand-gold">opportunité immobilière</span> stratégique.
-                </h1>
-                <p class="mt-6 text-xl text-gray-300 font-light">
-                    Bureaux, commerces et espaces stratégiques. Nous trouvons l'emplacement qui propulsera votre entreprise au Maroc.
+    </section>
+
+    <section id="approche" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div>
+                <span class="text-brand-emerald uppercase font-semibold text-sm tracking-wider">Le Constat</span>
+                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold text-brand-blue">Trouver un local d'entreprise ne devrait pas freiner votre business.</h2>
+                <p class="mt-6 text-gray-600 leading-relaxed">
+                    Le marché professionnel est saturé de propositions inadaptées. Chez **Coin Carrière**, nous adoptons une approche inverse : nous n'attendons pas que les opportunités se présentent, nous les dénichons sur-mesure grâce à notre accès exclusif **off-market**.
                 </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#contact" class="bg-brand-gold text-brand-blue px-8 py-4 font-bold text-lg hover:bg-brand-emerald hover:text-white transition shadow-xl">
-                        Échangeons sur votre projet
-                    </a>
-                    <a href="#approche" class="border border-white text-white px-8 py-4 font-bold text-lg hover:bg-white hover:text-brand-blue transition">
-                        En savoir plus
-                    </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white p-6 border-t-4 border-brand-gold shadow-sm">
+                    <div class="font-bold text-brand-blue text-lg">Accès Off-Market</div>
+                    <p class="mt-2 text-sm text-gray-600">Accédez à des biens professionnels exclusifs avant qu'ils ne soient listés publiquement.</p>
+                </div>
+                <div class="bg-white p-6 border-t-4 border-brand-gold shadow-sm">
+                    <div class="font-bold text-brand-blue text-lg">Négociation d'Experts</div>
+                    <p class="mt-2 text-sm text-gray-600">Nous défendons vos intérêts pour obtenir les meilleures conditions de bail.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section id="approche" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-brand-emerald uppercase font-semibold text-sm tracking-wider">Le Constat</span>
-                    <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold text-brand-blue">Trouver un local d'entreprise ne devrait pas freiner votre business.</h2>
-                    <p class="mt-6 text-gray-600 leading-relaxed">
-                        Le marché immobilier professionnel est saturé de propositions inadaptées et de négociations complexes. Vous perdez un temps précieux que vous devriez investir dans votre cœur de métier.
-                    </p>
-                    <p class="mt-4 text-gray-600 leading-relaxed">
-                        Chez **Coin Carrière**, nous adoptons une approche inverse : nous n'attendons pas que les opportunités se présentent, nous les dénichons sur-mesure (accès exclusif off-market) pour correspondre exactement à votre cahier des charges.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-gray-50 p-6 border-t-4 border-brand-gold shadow-sm">
-                        <div class="font-bold text-brand-blue text-lg">Accès Off-Market</div>
-                        <p class="mt-2 text-sm text-gray-600">Accédez à des biens professionnels exclusifs avant qu'ils ne soient listés sur le marché public.</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 border-t-4 border-brand-gold shadow-sm">
-                        <div class="font-bold text-brand-blue text-lg">Négociation d'Experts</div>
-                        <p class="mt-2 text-sm text-gray-600">Nous défendons vos intérêts pour obtenir les meilleures conditions de bail ou d'achat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="villes" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="villes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-brand-emerald uppercase font-semibold text-sm tracking-wider">Notre Présence</span>
                 <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold text-brand-blue">Des opportunités dans les plus grands pôles économiques</h2>
-                <p class="mt-4 text-gray-600">Nos experts locaux qualifiés sont actifs là où votre business doit être visible.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-lg group hover:scale-105 transition-transform duration-300">
-                    <div class="h-40 bg-brand-emerald flex items-center justify-center">
-                        <span class="text-4xl">🏙️</span>
-                    </div>
+                
+                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">🏙️</div>
                     <div class="p-6">
                         <h3 class="font-bold text-xl text-brand-gold">Casablanca</h3>
                         <p class="mt-2 text-sm text-gray-300">Bureaux premium & centres financiers au cœur de la capitale économique.</p>
                     </div>
                 </div>
-                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-lg group hover:scale-105 transition-transform duration-300">
-                    <div class="h-40 bg-brand-emerald flex items-center justify-center">
-                        <span class
-        
+
+                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">🏢</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-brand-gold">Marrakech</h3>
+                        <p class="mt-2 text-sm text-gray-300">Locaux commerciaux et investissements touristiques stratégiques.</p>
+                    </div>
+                </div>
+
+                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">🏛️</div>
+                    <div class="p-6">
+              
+                     
+
+  
+               
