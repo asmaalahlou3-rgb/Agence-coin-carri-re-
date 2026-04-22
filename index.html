@@ -18,97 +18,122 @@
     fbq('init', 'TON_PIXEL_ID'); 
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=TON_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
     <style>
         .bg-coin-dark { background-color: #061626; } 
         .text-coin-cyan { color: #219EED; } 
         .bg-coin-gradient { background: linear-gradient(135deg, #219EED 0%, #1A5FAD 100%); }
         .border-coin { border-color: rgba(33, 158, 237, 0.3); }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-coin-dark text-white font-sans selection:bg-cyan-500/30">
+<body class="bg-coin-dark text-white font-sans">
 
     <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="flex items-center space-x-3">
-            <img src="COIN CARRIERE LOGO.jpg" alt="Logo" class="h-14 w-14 rounded-full border-2 border-coin shadow-lg shadow-cyan-500/20">
-            <span class="font-bold tracking-tighter text-xl">COIN CARRIÈRE</span>
+        <div class="flex items-center space-x-4">
+            <img src="COIN CARRIERE LOGO.jpg" alt="Coin Carrière Logo" class="h-16 w-16 rounded-full border-2 border-coin shadow-lg shadow-cyan-500/20">
+            <span class="text-2xl font-bold tracking-tight">Coin Carrière™</span>
         </div>
-        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-[0.2em] font-medium">
-            <a href="#propos" class="hover:text-coin-cyan transition">À Propos</a>
-            <a href="#services" class="hover:text-coin-cyan transition">Services</a>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold">
+            <a href="#expertises" class="hover:text-coin-cyan transition">Expertises</a>
             <a href="#contact" class="hover:text-coin-cyan transition">Contact</a>
         </div>
     </nav>
 
-    <section class="max-w-5xl mx-auto px-6 py-20 text-center">
-        <h1 class="text-4xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight">
-            L'Immobilier Stratégique pour <br><span class="text-coin-cyan">Décideurs RH</span>.
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
+            Attirez les meilleurs talents grâce à un cadre de travail <span class="text-coin-cyan">d'exception</span>.
         </h1>
-        <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            Connectez votre entreprise aux meilleurs emplacements de Casablanca et attirez les profils qualifiés via notre plateforme exclusive.
+        <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
+            Coin Carrière connecte les entreprises en croissance avec des espaces stratégiques et des profils qualifiés à Casablanca.
         </p>
         
-        <div class="flex flex-col items-center space-y-6">
-            <button onclick="fbq('track', 'Lead');" class="bg-coin-gradient px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-cyan-500/20 active:scale-95">
-                Obtenir une consultation stratégique
-            </button>
-            <p class="text-xs text-gray-500 uppercase tracking-widest italic">Casablanca • Rabat • Marrakech • Fès</p>
+        <div class="relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border-4 border-coin shadow-2xl mb-16">
+            <div class="aspect-video bg-black/40 flex items-center justify-center group cursor-pointer">
+                <div class="w-20 h-20 bg-coin-cyan/80 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                    <div class="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-white border-b-[15px] border-b-transparent ml-2"></div>
+                </div>
+            </div>
         </div>
+
+        <button onclick="fbq('track', 'Lead');" class="bg-coin-gradient px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-xl shadow-cyan-500/30">
+            Obtenir une consultation stratégique
+        </button>
     </section>
 
-    <section id="services" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/10">
+    <div class="py-12 border-y border-white/10 glass-card">
+        <p class="text-center text-sm uppercase tracking-widest text-gray-500 mb-8 font-bold">Accès à un vivier de +5000 cadres qualifiés</p>
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-around items-center opacity-50 grayscale hover:grayscale-0 transition">
+            <span class="text-xl font-bold p-4">MOROCCO REALTY</span>
+            <span class="text-xl font-bold p-4">HR STRATEGY</span>
+            <span class="text-xl font-bold p-4">CASA FINANCE</span>
+            <span class="text-xl font-bold p-4">B2B NETWORK</span>
+        </div>
+    </div>
+
+    <section id="expertises" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-3xl font-bold text-center mb-16 italic underline decoration-coin-cyan underline-offset-8">Processus en 3 Étapes</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white/5 p-8 rounded-3xl border border-coin hover:bg-white/10 transition">
-                <div class="text-coin-cyan text-3xl mb-4">🏢</div>
-                <h3 class="text-xl font-bold mb-3">Bureaux Premium</h3>
-                <p class="text-gray-400 text-sm">Des espaces conçus pour la performance et le bien-être de vos équipes.</p>
+            <div class="text-center p-8 rounded-3xl border border-coin glass-card">
+                <div class="mb-6 flex justify-center"><img src="COIN CARRIERE LOGO.jpg" class="h-12 w-12 opacity-50"></div>
+                <h3 class="text-xl font-bold mb-4">1. Diagnostic</h3>
+                <p class="text-gray-400 text-sm">Analyse de vos besoins en locaux modernes en accord avec vos espaces stratégiques.</p>
             </div>
-            <div class="bg-white/5 p-8 rounded-3xl border border-coin hover:bg-white/10 transition">
-                <div class="text-coin-cyan text-3xl mb-4">🎯</div>
-                <h3 class="text-xl font-bold mb-3">Sourcing Talents</h3>
-                <p class="text-gray-400 text-sm">Accès direct à notre vivier de profils qualifiés pour vos recrutements.</p>
+            <div class="text-center p-8 rounded-3xl border border-coin glass-card">
+                <div class="mb-6 flex justify-center"><img src="COIN CARRIERE LOGO.jpg" class="h-12 w-12 opacity-50"></div>
+                <h3 class="text-xl font-bold mb-4">2. Sourcing</h3>
+                <p class="text-gray-400 text-sm">Matching avec les meilleurs profils et emplacements stratégiques au Maroc.</p>
             </div>
-            <div class="bg-white/5 p-8 rounded-3xl border border-coin hover:bg-white/10 transition">
-                <div class="text-coin-cyan text-3xl mb-4">⚡</div>
-                <h3 class="text-xl font-bold mb-3">Gain de Temps</h3>
-                <p class="text-gray-400 text-sm">Une interface unique pour gérer votre installation et votre acquisition RH.</p>
+            <div class="text-center p-8 rounded-3xl border border-coin glass-card">
+                <div class="mb-6 flex justify-center"><img src="COIN CARRIERE LOGO.jpg" class="h-12 w-12 opacity-50"></div>
+                <h3 class="text-xl font-bold mb-4">3. Installation</h3>
+                <p class="text-gray-400 text-sm">Installation via une interface unique pour l'immobilier et le recrutement.</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-black/30 mt-20">
-        <div class="max-w-6xl mx-auto px-6 py-16">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold mb-8">Prêt à transformer votre <br><span class="text-coin-cyan">Marque Employeur ?</span></h2>
-                    <div class="space-y-6 text-gray-300">
-                        <div class="flex items-start space-x-4">
-                            <span class="text-coin-cyan">📍</span>
-                            <p>Lotissement Sofia, Rue 1, N°14, CIL,<br>Casablanca, Maroc</p>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <span class="text-coin-cyan">📞</span>
-                            <p>0615602263</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Nom et Entreprise" class="w-full bg-black/20 border border-coin p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-coin-cyan/50 transition">
-                        <input type="email" placeholder="Email Professionnel" class="w-full bg-black/20 border border-coin p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-coin-cyan/50 transition">
-                        <button type="submit" class="w-full bg-coin-gradient py-4 rounded-xl font-bold hover:brightness-110 transition">Envoyer ma demande</button>
-                    </form>
-                </div>
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white text-gray-900 p-8 rounded-2xl">
+                <div class="h-10 w-10 bg-coin-dark/10 rounded-full mb-4 flex items-center justify-center">🏢</div>
+                <h4 class="font-bold mb-2">Marque Employeur :</h4>
+                <p class="text-sm">Bureaux modernes pour séduire la Génération Z.</p>
             </div>
-            <div class="mt-20 pt-8 border-t border-white/5 text-center text-gray-600 text-xs uppercase tracking-tighter">
-                &copy; 2026 Coin Carrière — Expertise Media Buying & B2B Real Estate
+            <div class="bg-white text-gray-900 p-8 rounded-2xl">
+                <div class="h-10 w-10 bg-coin-dark/10 rounded-full mb-4 flex items-center justify-center">📍</div>
+                <h4 class="font-bold mb-2">Rétention :</h4>
+                <p class="text-sm">Emplacements stratégiques (transports, services).</p>
             </div>
+            <div class="bg-white text-gray-900 p-8 rounded-2xl">
+                <div class="h-10 w-10 bg-coin-dark/10 rounded-full mb-4 flex items-center justify-center">⌛</div>
+                <h4 class="font-bold mb-2">Gain de Temps :</h4>
+                <p class="text-sm">Une seule interface pour l'immobilier et le recrutement.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="max-w-6xl mx-auto px-6 py-12 border-t border-white/10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="COIN CARRIERE LOGO.jpg" class="h-10 w-10 rounded-full">
+                    <span class="font-bold">Coin Carrière™</span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">📍 Lotissement Sofia, Rue 1, N°14, CIL, CASABLANCA</p>
+                <p class="text-gray-400 text-sm mb-8">📞 TEL : 0615602263</p>
+                <p class="text-xs text-gray-600">© 2026 Coin Carrière - Expert Media Buying au Maroc</p>
+            </div>
+            
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="First Name" class="bg-white text-black p-3 rounded-lg w-full outline-none">
+                    <input type="text" placeholder="Last Name" class="bg-white text-black p-3 rounded-lg w-full outline-none">
+                </div>
+                <input type="email" placeholder="Email" class="bg-white text-black p-3 rounded-lg w-full outline-none">
+                <button type="submit" class="bg-coin-gradient w-full py-4 rounded-lg font-bold text-white shadow-lg">Submit</button>
+                <p class="text-[10px] text-center text-gray-500 italic uppercase tracking-widest">Optimisé pour Meta Pixel</p>
+            </form>
         </div>
     </footer>
 
 </body>
 </html>
-           
