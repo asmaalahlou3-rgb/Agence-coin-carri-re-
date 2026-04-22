@@ -1,273 +1,114 @@
-
-              
-              
-
-      
-
-
-
-
-    <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Carrière | Immobilier d'Entreprise au Maroc</title>
-    
+    <title>Coin Carrière | Immobilier Stratégique & Talents</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-blue': '#0B192C',
-                        'brand-gold': '#D4AF37',
-                        'brand-emerald': '#093A3E'
-                    },
-                    fontFamily: {
-                        'sans': ['Montserrat', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TON_PIXEL_ID'); 
+    fbq('track', 'PageView');
     </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=TON_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <style>
+        .bg-coin-dark { background-color: #061626; } 
+        .text-coin-cyan { color: #219EED; } 
+        .bg-coin-gradient { background: linear-gradient(135deg, #219EED 0%, #1A5FAD 100%); }
+        .border-coin { border-color: rgba(33, 158, 237, 0.3); }
+    </style>
 </head>
-<body class="font-sans bg-white text-gray-800 relative">
+<body class="bg-coin-dark text-white font-sans selection:bg-cyan-500/30">
 
-    <header class="bg-brand-blue text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-20">
-            <div class="font-serif text-2xl font-bold text-brand-gold">
-                Coin Carrière
-            </div>
-            
-            <nav class="hidden md:flex space-x-8 text-sm uppercase font-semibold tracking-wider">
-                <a href="#accueil" class="hover:text-brand-gold transition">Accueil</a>
-                <a href="#approche" class="hover:text-brand-gold transition">Notre Approche</a>
-                <a href="#villes" class="hover:text-brand-gold transition">Nos Secteurs</a>
-                <a href="#temoignages" class="hover:text-brand-gold transition">Avis</a>
-                <a href="#contact" class="bg-brand-gold text-brand-blue px-4 py-2 rounded-sm hover:bg-white hover:text-brand-blue transition">Contact</a>
-            </nav>
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="flex items-center space-x-3">
+            <img src="COIN CARRIERE LOGO.jpg" alt="Logo" class="h-14 w-14 rounded-full border-2 border-coin shadow-lg shadow-cyan-500/20">
+            <span class="font-bold tracking-tighter text-xl">COIN CARRIÈRE</span>
         </div>
-    </header>
-
-    <section id="accueil" class="bg-brand-blue text-white py-24 lg:py-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h1 class="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Transformez votre croissance en <span class="text-brand-gold">opportunité immobilière</span> stratégique.
-            </h1>
-            <p class="mt-6 text-xl text-gray-300 font-light max-w-3xl mx-auto">
-                Bureaux, commerces et espaces stratégiques. Nous trouvons l'emplacement qui propulsera votre entreprise au Maroc.
-            </p>
-            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-brand-gold text-brand-blue px-8 py-4 font-bold text-lg hover:bg-brand-emerald hover:text-white transition shadow-lg transform hover:-translate-y-1">
-                    Échangeons sur votre projet
-                </a>
-                <a href="#approche" class="border border-white text-white px-8 py-4 font-bold text-lg hover:bg-white hover:text-brand-blue transition">
-                    En savoir plus
-                </a>
-            </div>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-[0.2em] font-medium">
+            <a href="#propos" class="hover:text-coin-cyan transition">À Propos</a>
+            <a href="#services" class="hover:text-coin-cyan transition">Services</a>
+            <a href="#contact" class="hover:text-coin-cyan transition">Contact</a>
         </div>
-    </section>
+    </nav>
 
-    <section id="approche" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <div>
-                <span class="text-brand-emerald uppercase font-semibold text-sm tracking-wider">Le Constat</span>
-                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold text-brand-blue">Trouver un local d'entreprise ne devrait pas freiner votre business.</h2>
-                <p class="mt-6 text-gray-600 leading-relaxed">
-                    Le marché professionnel est saturé de propositions inadaptées. Chez **Coin Carrière**, nous adoptons une approche inverse : nous n'attendons pas que les opportunités se présentent, nous les dénichons sur-mesure grâce à notre accès exclusif **off-market**.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="bg-white p-6 border-t-4 border-brand-gold shadow-sm">
-                    <div class="font-bold text-brand-blue text-lg">Accès Off-Market</div>
-                    <p class="mt-2 text-sm text-gray-600">Accédez à des biens professionnels exclusifs avant qu'ils ne soient listés publiquement.</p>
-                </div>
-                <div class="bg-white p-6 border-t-4 border-brand-gold shadow-sm">
-                    <div class="font-bold text-brand-blue text-lg">Négociation d'Experts</div>
-                    <p class="mt-2 text-sm text-gray-600">Nous défendons vos intérêts pour obtenir les meilleures conditions de bail.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="villes" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-brand-emerald uppercase font-semibold text-sm tracking-wider">Notre Présence</span>
-                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold text-brand-blue">Des opportunités dans les plus grands pôles économiques</h2>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">🏙️</div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-brand-gold">Casablanca</h3>
-                        <p class="mt-2 text-sm text-gray-300">Bureaux premium & centres financiers au cœur de la capitale économique.</p>
-                    </div>
-                </div>
-
-                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">🏢</div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-brand-gold">Marrakech</h3>
-                        <p class="mt-2 text-sm text-gray-300">Locaux commerciaux et investissements touristiques stratégiques.</p>
-                    </div>
-                </div>
-
-                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">🏛️</div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-brand-gold">Fès</h3>
-                        <p class="mt-2 text-sm text-gray-300">Espaces industriels et sièges régionaux au fort patrimoine.</p>
-                    </div>
-                </div>
-
-                <div class="bg-brand-blue text-white rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
-                    <div class="h-40 bg-brand-emerald flex items-center justify-center text-4xl">⚓</div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-brand-gold">Tanger</h3>
-                        <p class="mt-2 text-sm text-gray-300">Zones logistiques et bureaux avec vue sur le hub portuaire.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="temoignages" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-brand-emerald uppercase font-semibold text-sm tracking-wider">Témoignages</span>
-                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold text-brand-blue">Ils nous font confiance pour leurs locaux</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <p class="text-gray-600 italic">"Grâce à Coin Carrière, nous avons trouvé nos plateaux de bureaux à Casa Finance City en moins de 3 semaines. Un gain de temps précieux pour notre entreprise."</p>
-                    <div class="mt-6 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-brand-emerald text-white rounded-full flex items-center justify-center font-bold">KB</div>
-                        <div>
-                            <div class="font-semibold text-brand-blue">Karim B.</div>
-                            <div class="text-sm text-gray-500">Directeur Général, Tech Atlas</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <p class="text-gray-600 italic">"L'accès au marché off-market a fait toute la différence. Nous avons pu louer un local commercial idéalement placé à Marrakech avant même qu'il ne soit listé."</p>
-                    <div class="mt-6 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-brand-emerald text-white rounded-full flex items-center justify-center font-bold">SA</div>
-                        <div>
-                            <div class="font-semibold text-brand-blue">Sara A.</div>
-                            <div class="text-sm text-gray-500">Responsable Expansion, Retail Maroc</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <p class="text-gray-600 italic">"Une équipe qui défend réellement nos intérêts lors de la négociation du bail commercial. Nous ferons de nouveau appel à eux pour notre futur hub à Tanger."</p>
-                    <div class="mt-6 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-brand-emerald text-white rounded-full flex items-center justify-center font-bold">OM</div>
-                        <div>
-                            <div class="font-semibold text-brand-blue">Omar M.</div>
-                            <div class="text-sm text-gray-500">DAF, Logistique du Nord</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-brand-blue text-white relative overflow-hidden">
+    <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight">
+            L'Immobilier Stratégique pour <br><span class="text-coin-cyan">Décideurs RH</span>.
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+            Connectez votre entreprise aux meilleurs emplacements de Casablanca et attirez les profils qualifiés via notre plateforme exclusive.
+        </p>
         
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0 bg-repeat" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
-        </div>
-
-        <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
-            
-            <div class="text-center mb-12">
-                <span class="text-brand-gold uppercase font-semibold text-sm tracking-wider">Offres Privées</span>
-                <h2 class="mt-2 font-serif text-3xl md:text-4xl font-bold leading-tight">
-                    Ne laissez pas le local idéal <span class="text-brand-gold">filer chez vos concurrents</span>.
-                </h2>
-                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto font-light">
-                    Remplissez le formulaire ci-dessous pour recevoir une **sélection exclusive de 3 biens "Off-Market"** en moins de 48h.
-                </p>
-                
-                <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-                    <div class="flex items-center gap-2">
-                        <span class="text-brand-gold">✔</span> Diagnostic gratuit
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-brand-gold">✔</span> Zéro engagement
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-brand-gold">✔</span> 100% Confidentiel
-                    </div>
-                </div>
-            </div>
-
-            <form class="bg-white text-gray-800 p-8 md:p-10 rounded-lg shadow-2xl space-y-6 max-w-4xl mx-auto border-t-4 border-brand-gold">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-brand-blue">Nom Complet *</label>
-                        <input type="text" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald" placeholder="John Doe" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-brand-blue">Société *</label>
-                        <input type="text" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald" placeholder="Ma Société SA" required>
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2 text-brand-blue">Message</label>
-                    <textarea rows="3" class="w-full border border-gray-300 px-4 py-3 rounded-sm focus:outline-none focus:border-brand-emerald focus:ring-1 focus:ring-brand-emerald" placeholder="Nous recherchons des bureaux de 200m² à Casablanca..."></textarea>
-                </div>
-
-                <div class="text-center">
-                    <button type="submit" class="w-full bg-brand-gold text-brand-blue font-bold px-10 py-4 uppercase text-base tracking-wider hover:bg-brand-emerald hover:text-white transition duration-300 shadow-lg transform hover:-translate-y-1">
-                        Recevoir mes 3 opportunités off-market ➔
-                    </button>
-                    <p class="text-xs text-gray-500 mt-4 flex items-center justify-center gap-1">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
-                        Vos informations sont protégées et 100% confidentielles.
-                    </p>
-                </div>
-            </form>
-
+        <div class="flex flex-col items-center space-y-6">
+            <button onclick="fbq('track', 'Lead');" class="bg-coin-gradient px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-cyan-500/20 active:scale-95">
+                Obtenir une consultation stratégique
+            </button>
+            <p class="text-xs text-gray-500 uppercase tracking-widest italic">Casablanca • Rabat • Marrakech • Fès</p>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-500 py-10 text-center text-sm border-t border-gray-800">
-        <p class="font-serif text-brand-gold text-lg mb-2">Coin Carrière</p>
-        <p>&copy; 2026 Coin Carrière Immobilier. Tous droits réservés.</p>
-        <p class="mt-1">Casablanca - Marrakech - Fès - Tanger</p>
-    </footer>
+    <section id="services" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/10">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white/5 p-8 rounded-3xl border border-coin hover:bg-white/10 transition">
+                <div class="text-coin-cyan text-3xl mb-4">🏢</div>
+                <h3 class="text-xl font-bold mb-3">Bureaux Premium</h3>
+                <p class="text-gray-400 text-sm">Des espaces conçus pour la performance et le bien-être de vos équipes.</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-coin hover:bg-white/10 transition">
+                <div class="text-coin-cyan text-3xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold mb-3">Sourcing Talents</h3>
+                <p class="text-gray-400 text-sm">Accès direct à notre vivier de profils qualifiés pour vos recrutements.</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-coin hover:bg-white/10 transition">
+                <div class="text-coin-cyan text-3xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold mb-3">Gain de Temps</h3>
+                <p class="text-gray-400 text-sm">Une interface unique pour gérer votre installation et votre acquisition RH.</p>
+            </div>
+        </div>
+    </section>
 
-    <a href="https://wa.me/212600000000?text=Bonjour,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20opportunités%20off-market." 
-       target="_blank" 
-       class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center group"
-       title="Contactez-nous sur WhatsApp">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 448 512">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.6-16.1-37.7-17.9-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.3-14.6-27.4-32.7-30.5-38.1-3.2-5.5-.3-8.5 2.5-11.2 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.6-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.6-13.3 37.2-26.2 4.6-12.9 4.6-24.1 3.2-26.4-1.3-2.3-5-3.7-10.5-6.5z"/>
-        </svg>
-        <span class="absolute right-full mr-3 bg-brand-blue text-white text-xs font-bold px-3 py-2 rounded-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
-            Un projet urgent ? Discutons-en !
-        </span>
-    </a>
+    <footer id="contact" class="bg-black/30 mt-20">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Prêt à transformer votre <br><span class="text-coin-cyan">Marque Employeur ?</span></h2>
+                    <div class="space-y-6 text-gray-300">
+                        <div class="flex items-start space-x-4">
+                            <span class="text-coin-cyan">📍</span>
+                            <p>Lotissement Sofia, Rue 1, N°14, CIL,<br>Casablanca, Maroc</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-coin-cyan">📞</span>
+                            <p>0615602263</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Nom et Entreprise" class="w-full bg-black/20 border border-coin p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-coin-cyan/50 transition">
+                        <input type="email" placeholder="Email Professionnel" class="w-full bg-black/20 border border-coin p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-coin-cyan/50 transition">
+                        <button type="submit" class="w-full bg-coin-gradient py-4 rounded-xl font-bold hover:brightness-110 transition">Envoyer ma demande</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-20 pt-8 border-t border-white/5 text-center text-gray-600 text-xs uppercase tracking-tighter">
+                &copy; 2026 Coin Carrière — Expertise Media Buying & B2B Real Estate
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
-  
-         
+           
