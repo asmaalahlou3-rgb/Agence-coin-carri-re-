@@ -18,6 +18,23 @@
             color: #fff;
         }
 
+        /* En-tête pour le Logo */
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px; /* Espace autour du logo */
+            z-index: 2; /* Pour qu'il soit par-dessus la vidéo et l'overlay */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px; /* Taille du logo (ajustable) */
+            width: auto;
+        }
+
         /* Conteneur Hero avec Vidéo */
         .hero-section {
             position: relative;
@@ -103,12 +120,18 @@
 
         /* Responsive Mobile */
         @media (max-width: 768px) {
+            .header { padding: 15px 20px; } /* Moins d'espace sur mobile */
+            .logo { height: 40px; } /* Logo plus petit sur mobile */
             .content h1 { font-size: 2.5rem; }
             .content p { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
+
+    <header class="header">
+        <img src="logo.png" alt="Logo Coin Carrière" class="logo">
+    </header>
 
     <section class="hero-section">
         <video autoplay muted loop playsinline class="video-background">
@@ -127,4 +150,4 @@
 
 </body>
 </html>
-       
+     
