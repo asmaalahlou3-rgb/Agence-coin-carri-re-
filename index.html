@@ -3,154 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin Carrière | Recrutement Immobilier N°1 au Maroc</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: '#061626', 
-                        accent: '#b4dc02',
-                        gold: '#D4AF37',
-                    },
-                    fontFamily: { sans: ['Inter', 'sans-serif'], }
-                }
-            }
+    <title>Coin Carrière | Immobilier d'Entreprise</title>
+    <style>
+        /* Styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-    </script>
-    
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'VOTRE_ID'); 
-    fbq('track', 'PageView');
-    </script>
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Conteneur Hero avec Vidéo */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* La Vidéo en Arrière-plan */
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            filter: grayscale(100%) brightness(50%); /* Rend la vidéo plus sombre et pro */
+        }
+
+        /* Overlay Émeraude pour le style luxe */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(4, 43, 31, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: -1;
+        }
+
+        /* Contenu Texte */
+        .content {
+            text-align: center;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #d4af37, #fcf6ba, #b8860b); /* Dégradé Or */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Bouton Or / Gold */
+        .btn-gold {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(45deg, #d4af37, #fcf6ba);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .btn-gold:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .content h1 { font-size: 2.5rem; }
+            .content p { font-size: 1.1rem; }
+        }
+    </style>
 </head>
-<body class="bg-white text-slate-900 antialiased font-sans">
+<body>
 
-    <header class="relative bg-brand py-16 md:py-24 text-center border-b-4 border-gold">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-center mb-8">
-                <img src="COIN CARRIERE LOGO.jpg" alt="Logo Coin Carrière" class="h-28 w-28 rounded-full border-4 border-white shadow-2xl">
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                Recrutez les Meilleurs Talents <br><span class="text-accent italic">de l'Immobilier au Maroc</span>
-            </h1>
-            <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90">
-                Agents, Gestionnaires, Experts : trouvez votre prochain collaborateur de confiance via notre vivier vérifié.
-            </p>
-            <div class="space-y-4">
-                <a href="https://coincarriere.com/register?type=company" 
-                   onclick="fbq('track', 'Lead');"
-                   class="inline-block bg-accent text-brand font-black px-12 py-5 rounded-xl text-xl hover:scale-105 transition shadow-xl uppercase tracking-wider">
-                    Publier une offre gratuitement
-                </a>
-                <p class="text-white/70 text-sm font-medium uppercase tracking-widest">Sans Carte Bancaire</p>
-            </div>
-        </div>
-    </header>
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="oincarrière ouvre les portes(1).mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
 
-    <div class="bg-slate-100 py-6 border-b border-slate-200">
-        <p class="text-center text-slate-500 font-bold uppercase tracking-widest text-xs">
-            Déjà adopté par +451 entreprises immobilières leaders
-        </p>
-    </div>
+        <div class="overlay"></div>
 
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 underline decoration-gold decoration-4 underline-offset-8">Processus en 4 Étapes</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-slate-50 rounded-2xl border-b-4 border-brand">
-                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">1</div>
-                    <h3 class="font-bold mb-2">Publiez</h3>
-                    <p class="text-slate-600 text-sm italic">Postez vos besoins immobiliers en 2 minutes.</p>
-                </div>
-                <div class="text-center p-6 bg-slate-50 rounded-2xl border-b-4 border-brand">
-                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">2</div>
-                    <h3 class="font-bold mb-2">Recevez</h3>
-                    <p class="text-slate-600 text-sm italic">Accédez aux profils qualifiés immédiatement.</p>
-                </div>
-                <div class="text-center p-6 bg-slate-50 rounded-2xl border-b-4 border-brand">
-                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">3</div>
-                    <h3 class="font-bold mb-2">Évaluez</h3>
-                    <p class="text-slate-600 text-sm italic">Comparez les expériences et les compétences.</p>
-                </div>
-                <div class="text-center p-6 bg-slate-50 rounded-2xl border-b-4 border-brand">
-                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">4</div>
-                    <h3 class="font-bold mb-2">Embauchez</h3>
-                    <p class="text-slate-600 text-sm italic">Recrutez votre futur talent immobilier.</p>
-                </div>
-            </div>
+        <div class="content">
+            <h1>Coin Carrière</h1>
+            <p>Solutions Immobilières Stratégiques pour Entreprises Visionnaires</p>
+            <a href="#contact" class="btn-gold">Découvrir nos opportunités</a>
         </div>
     </section>
-
-    <section class="py-20 bg-brand text-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 italic text-gold">Découvrez comment l'Assistante RH trouve son Talent Immo</h2>
-                <p class="text-blue-100 mb-8 leading-relaxed">
-                    "Comme de nombreux professionnels du secteur à Casablanca, notre assistante RH a divisé ses délais de recrutement par trois grâce à la puissance du réseau Coin Carrière."
-                </p>
-                <ul class="space-y-4 text-sm font-semibold uppercase tracking-tighter">
-                    <li class="flex items-center"><span class="text-accent mr-2">✔</span> Gain de temps massif</li>
-                    <li class="flex items-center"><span class="text-accent mr-2">✔</span> Profils vérifiés secteur immo</li>
-                    <li class="flex items-center"><span class="text-accent mr-2">✔</span> Support local au Maroc</li>
-                </ul>
-            </div>
-            <div class="relative group cursor-pointer aspect-video bg-slate-800 rounded-3xl border-8 border-white/10 overflow-hidden flex items-center justify-center">
-                <img src="COIN CARRIERE LOGO.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition">
-                <div class="w-20 h-20 bg-accent text-brand rounded-full flex items-center justify-center shadow-2xl relative z-10">
-                    <svg class="w-8 h-8 fill-current ml-1" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6V4z"/></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-white border-y border-slate-100">
-        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div><p class="text-4xl font-black text-brand">+15k</p><p class="text-xs uppercase text-slate-400 font-bold">Entreprises</p></div>
-            <div><p class="text-4xl font-black text-brand">85%</p><p class="text-xs uppercase text-slate-400 font-bold">Matching</p></div>
-            <div><p class="text-4xl font-black text-brand">6X</p><p class="text-xs uppercase text-slate-400 font-bold">Plus Rapide</p></div>
-            <div><p class="text-4xl font-black text-brand">4.1%</p><p class="text-xs uppercase text-slate-400 font-bold">Taux de Rétention</p></div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-50 text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-extrabold mb-6">Ne laissez plus vos postes vacants.</h2>
-            <p class="text-slate-600 mb-10 max-w-xl mx-auto italic">
-                Optimisez votre recrutement immobilier au Maroc dès aujourd'hui avec notre expertise.
-            </p>
-            <a href="https://coincarriere.com/register?type=company" 
-               onclick="fbq('track', 'Lead');"
-               class="bg-brand text-white font-bold px-12 py-6 rounded-xl text-xl hover:bg-slate-800 transition shadow-2xl uppercase">
-                Démarrer mon recrutement gratuit
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-brand text-white py-12 border-t-4 border-gold">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-80">
-            <div class="mb-6 md:mb-0 text-center md:text-left">
-                <p class="font-bold text-gold mb-2">Coin Carrière™</p>
-                <p class="text-[10px] uppercase tracking-widest">
-                    Lotissement Sofia, Rue 1, N°14, CIL, CASABLANCA <br>
-                    TEL : 0615602263 | Expertise Media Buying & B2B
-                </p>
-            </div>
-            <div class="text-[10px] uppercase tracking-widest">
-                &copy; 2026 Coin Carrière Maroc | Optimisé pour Meta Pixel
-            </div>
-        </div>
-    </footer>
 
 </body>
 </html>
+       
