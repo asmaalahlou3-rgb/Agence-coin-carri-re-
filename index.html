@@ -7,14 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050B14; /* Fond bleu nuit très sombre */
-            --primary-color: #0084FF; /* Bleu ciel vif */
-            --secondary-color: #1E40AF; /* Bleu royal intense */
-            --accent-color: #FFFFFF;
+            --bg-color: #030A18; /* Bleu nuit très sombre */
+            --primary-color: #3B82F6; /* Bleu électrique lumineux */
+            --primary-hover: #2563EB;
+            --secondary-color: #1E40AF;
             --text-main: #FFFFFF;
             --text-secondary: #94A3B8;
-            --card-bg: rgba(255, 255, 255, 0.04);
-            --card-border: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(59, 130, 246, 0.04);
+            --card-border: rgba(59, 130, 246, 0.2);
         }
 
         * {
@@ -43,7 +43,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 24px 0;
-            border-bottom: 1px solid var(--card-border);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .navbar-logo {
@@ -67,7 +67,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 14px;
-            box-shadow: 0 6px 20px rgba(0, 132, 255, 0.25);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
             transition: transform 0.25s ease;
         }
 
@@ -108,21 +108,21 @@
 
         .btn-trial:hover {
             background-color: var(--primary-color);
-            color: var(--bg-color);
-            box-shadow: 0 0 20px rgba(0, 132, 255, 0.4);
+            color: var(--text-main);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 100px 0 80px 0;
+            padding: 100px 0 60px 0;
             max-width: 850px;
             margin: 0 auto;
         }
 
         .hero-badge {
             display: inline-block;
-            background-color: rgba(0, 132, 255, 0.12);
+            background-color: rgba(59, 130, 246, 0.12);
             color: var(--primary-color);
             padding: 6px 18px;
             border-radius: 20px;
@@ -157,6 +157,7 @@
             display: flex;
             gap: 16px;
             justify-content: center;
+            margin-bottom: 40px;
         }
 
         .btn-primary, .btn-secondary {
@@ -171,13 +172,13 @@
 
         .btn-primary {
             background-color: var(--primary-color);
-            color: #FFFFFF;
+            color: var(--text-main);
             border: none;
-            box-shadow: 0 4px 20px rgba(0, 132, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: #0066CC;
+            background-color: var(--primary-hover);
             transform: translateY(-2px);
         }
 
@@ -188,76 +189,87 @@
         }
 
         .btn-secondary:hover {
-            border-color: rgba(255, 255, 255, 0.3);
-            background-color: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary-color);
+            background-color: rgba(59, 130, 246, 0.08);
             transform: translateY(-2px);
         }
 
-        /* Testimonials Section */
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 50px;
+        /* Testimonial Section avec vidéo */
+        .testimonial-section {
+            padding: 60px 0;
         }
 
-        .testimonials-header h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
-
-        .testimonials-header p {
-            color: var(--text-secondary);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 100px;
-        }
-
-        .testimonial-card {
+        .testimonial-container {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 36px 32px;
-            border-radius: 18px;
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 1050px;
+            margin: 0 auto;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            align-items: center;
+            gap: 48px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .testimonial-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 12px 32px rgba(0, 132, 255, 0.1);
+        .testimonial-text {
+            flex: 1;
+        }
+
+        .testimonial-badge {
+            display: inline-block;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 4px 12px;
+            border-radius: 12px;
         }
 
         .testimonial-quote {
-            font-size: 0.95rem;
+            font-size: 1.25rem;
+            font-weight: 500;
             line-height: 1.6;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
             color: #E2E8F0;
         }
 
         .testimonial-author {
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             color: var(--text-main);
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 16px;
         }
 
         .testimonial-author span {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
             font-weight: 400;
             margin-top: 4px;
         }
 
+        .testimonial-media {
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .testimonial-media video {
+            width: 100%;
+            border-radius: 18px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+            outline: none;
+            background-color: #000;
+        }
+
         /* Features Section */
+        .features-section {
+            padding: 80px 0;
+        }
+
         .features-header {
             text-align: center;
             margin-bottom: 50px;
@@ -277,7 +289,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
         }
 
         .feature-card {
@@ -289,7 +301,7 @@
         }
 
         .feature-card:hover {
-            border-color: var(--secondary-color);
+            border-color: var(--primary-color);
             transform: translateY(-4px);
         }
 
@@ -306,9 +318,61 @@
             line-height: 1.7;
         }
 
+        /* Strong CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(3, 10, 24, 0.8) 100%), var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 64px 32px;
+            text-align: center;
+            margin-bottom: 80px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #FFFFFF 0%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 36px auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-cta-large {
+            background-color: var(--primary-color);
+            color: var(--text-main);
+            padding: 18px 42px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-cta-large:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
         /* Footer */
         .footer {
-            border-top: 1px solid var(--card-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 44px 0;
             text-align: center;
             color: var(--text-secondary);
@@ -323,10 +387,23 @@
             .hero h1 {
                 font-size: 2.4rem;
             }
-            .testimonials-grid, .features-grid {
+            .testimonial-container {
+                flex-direction: column;
+                padding: 28px;
+                text-align: center;
+                gap: 28px;
+            }
+            .testimonial-media {
+                max-width: 100%;
+            }
+            .features-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
                 padding: 0 8px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                gap: 16px;
             }
         }
     </style>
@@ -343,7 +420,7 @@
             </div>
             <div class="navbar-links">
                 <a href="#solutions">Solutions</a>
-                <a href="#temoignages">Success Stories</a>
+                <a href="#temoignage">Success Story</a>
                 <a href="#contact" class="btn-trial">Essai Gratuit</a>
             </div>
         </nav>
@@ -352,47 +429,33 @@
             <span class="hero-badge">Le n°1 du recrutement immobilier au Maroc</span>
             <h1>Recrutez vos futurs talents <br> en un temps record.</h1>
             <p>CoinCarrière aide les agences immobilières à Casablanca, Marrakech et Rabat à trouver des profils RH et commerciaux vérifiés grâce à notre algorithme intelligent.</p>
-            
+
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">Trouver un profil</a>
                 <a href="#solutions" class="btn-secondary">En savoir plus</a>
             </div>
         </header>
 
-        <section class="testimonials" id="temoignages">
-            <div class="testimonials-header">
-                <h2>Ce que nos partenaires en disent</h2>
-                <p>Découvrez les retours d'assistantes et responsables RH au Maroc.</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"Le matching IA nous a permis de réduire notre temps de recrutement de près de 70%. C'est un outil indispensable pour les agences qui cherchent des profils qualifiés rapidement à Casablanca."</p>
+        <section class="testimonial-section" id="temoignage">
+            <div class="testimonial-container">
+                <div class="testimonial-text">
+                    <span class="testimonial-badge">Success Story</span>
+                    <p class="testimonial-quote">"J'ai trouvé le profil idéal en moins de 48h. En tant qu'assistante RH dans une agence immobilière en pleine croissance, la pression du recrutement était énorme. CoinCarrière a simplifié tout mon processus de sélection."</p>
                     <div class="testimonial-author">
                         Leila Mansouri
                         <span>Assistante RH Senior, 30 ans — Casablanca</span>
                     </div>
                 </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"L'expertise locale est tout simplement bluffante. L'algorithme comprend exactement nos besoins en ressources humaines dans le secteur immobilier, surtout dans les zones en pleine expansion à Marrakech."</p>
-                    <div class="testimonial-author">
-                        Sofia Benjelloun
-                        <span>Responsable Recrutement, 34 ans — Marrakech</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">"Une plateforme fluide et intuitive ! Nous avons pu intégrer trois nouveaux agents commerciaux en un temps record grâce à la précision des profils vérifiés."</p>
-                    <div class="testimonial-author">
-                        Yasmine Tazi
-                        <span>Directrice RH, 28 ans — Rabat</span>
-                    </div>
+                <div class="testimonial-media">
+                    <video controls width="100%">
+                        <source src="video-placeholder.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
                 </div>
             </div>
         </section>
 
-        <section class="features" id="solutions">
+        <section class="features-section" id="solutions">
             <div class="features-header">
                 <h2>Pourquoi choisir CoinCarrière ?</h2>
                 <p>La plateforme pensée pour les professionnels de l'immobilier au Maroc.</p>
@@ -414,6 +477,14 @@
             </div>
         </section>
 
+        <section class="cta-section" id="contact">
+            <h2>Prêt à transformer vos recrutements ?</h2>
+            <p>Rejoignez dès aujourd'hui les plus de 200 agences immobilières au Maroc qui font confiance à CoinCarrière pour trouver les meilleurs talents en un temps record.</p>
+            <div class="cta-buttons">
+                <a href="mailto:contact@coincarriere.ma" class="btn-cta-large">Démarrer mon essai gratuit</a>
+            </div>
+        </section>
+
         <footer class="footer">
             &copy; 2026 CoinCarrière Maroc. Plateforme de recrutement immobilier n°1. Tous droits réservés.
         </footer>
@@ -421,7 +492,3 @@
 
 </body>
 </html>
-
-     
-
-     
