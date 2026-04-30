@@ -51,10 +51,37 @@
             padding: 0 24px;
         }
 
+        /* HEADER & LOGO */
+        .site-header {
+            background-color: var(--white);
+            padding: 20px 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .site-header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .site-header .logo span {
+            color: var(--text-dark);
+        }
+
         /* 1. SECTION HERO */
         .hero {
             background-color: var(--bg-light);
-            padding: 80px 0 60px 0;
+            padding: 60px 0 60px 0;
             text-align: center;
         }
 
@@ -107,6 +134,7 @@
             padding: 4px 12px;
             border-radius: 20px;
             display: inline-block;
+            margin-bottom: 16px;
         }
 
         /* 2. PREUVE SOCIALE */
@@ -285,6 +313,14 @@
 </head>
 <body>
 
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">
+                Coin<span>Carrière</span>
+            </a>
+        </div>
+    </header>
+
     <section class="hero">
         <div class="container">
             <span class="badge-gratuit">Publication d'offres 100% gratuite</span>
@@ -411,5 +447,3 @@
 
 </body>
 </html>
-           
-     
