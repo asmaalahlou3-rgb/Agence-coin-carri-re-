@@ -4,104 +4,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoinCarrière - Recrutement Immobilier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #0d0f12;
-            --surface-color: #1a1e24;
-            --accent-green: #116466;
-            --accent-gold: #c5a880;
-            --text-main: #ffffff;
-            --text-secondary: #a0a6ab;
+            --brand-blue: #007bb8;
+            --hero-bg: #005b8a;
+            --accent-lime: #b4dc02;
+            --text-dark: #1e293b;
+            --text-light: #ffffff;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-radius-lg: 24px;
+            --border-radius-md: 16px;
+            --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.05);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 2rem 1rem;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
         .container {
             width: 100%;
-            max-width: 1100px;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        /* En-tête */
-        header {
+        /* 1. Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--hero-bg), var(--brand-blue));
+            color: var(--text-light);
+            padding: 80px 0;
             text-align: center;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
         }
 
-        header h1 {
-            font-size: 2.2rem;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.5px;
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
-        header p {
-            color: var(--text-secondary);
-            font-size: 1rem;
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Section Principale */
-        .main-section {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 2rem;
-            align-items: stretch;
+        .hero .highlight {
+            color: var(--accent-lime);
+            font-weight: 600;
         }
 
-        @media (max-width: 868px) {
-            .main-section {
-                grid-template-columns: 1fr;
-            }
+        .btn {
+            display: inline-block;
+            background-color: var(--brand-blue);
+            color: var(--text-light);
+            padding: 16px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 123, 184, 0.3);
+            cursor: pointer;
         }
 
-        /* Colonne Témoignages */
-        .testimonials-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: #006296;
+        }
+
+        /* 2. Social Proof Section */
+        .social-proof {
+            background: var(--text-light);
+            padding: 24px 0;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .social-proof p {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .social-proof strong {
+            color: var(--brand-blue);
+        }
+
+        /* 3. Process Section */
+        .process {
+            padding: 72px 0;
         }
 
         .section-title {
-            font-size: 1.1rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: var(--text-dark);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .process-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-md);
+            padding: 32px 20px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #f1f5f9;
+        }
+
+        .process-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: var(--brand-blue);
+            color: var(--text-light);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+        }
+
+        .process-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .process-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* 4. Benefits Section */
+        .benefits {
+            background-color: var(--text-light);
+            padding: 80px 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .benefit-card {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius-lg);
+            padding: 36px 32px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .benefit-card p {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        /* 5. Video & Testimonials Section */
+        .video-section {
+            padding: 80px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .testimonials-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
         .testimonial-card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--accent-gold);
-            border-radius: 8px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            padding: 28px;
+            border-left: 5px solid var(--brand-blue);
+            box-shadow: var(--shadow-soft);
         }
 
         .testimonial-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 16px;
+            margin-bottom: 16px;
         }
 
         .testimonial-img {
@@ -109,46 +240,39 @@
             height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--accent-green);
         }
 
-        .testimonial-info h3 {
-            font-size: 1rem;
-            color: var(--text-main);
+        .testimonial-info h5 {
+            font-size: 1.05rem;
+            color: var(--text-dark);
         }
 
-        .testimonial-info p {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
+        .testimonial-info span {
+            font-size: 0.82rem;
+            color: #64748b;
         }
 
         .testimonial-quote {
             font-size: 0.9rem;
-            line-height: 1.5;
-            color: #d1d5db;
+            color: #334155;
             font-style: italic;
         }
 
-        /* Colonne Vidéo */
         .video-column {
-            background-color: var(--surface-color);
-            border: 1px solid var(--accent-green);
-            border-radius: 8px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 1.5rem;
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #e2e8f0;
         }
 
         .video-wrapper {
             position: relative;
-            width: 100%;
             padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            background-color: #000;
-            border-radius: 6px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
         }
 
         .video-wrapper iframe {
@@ -160,100 +284,239 @@
             border: 0;
         }
 
-        .video-overlay-text {
+        .video-caption {
             text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+            font-size: 0.95rem;
+            color: #64748b;
         }
 
-        /* CTA */
-        .cta-container {
+        /* 6. Statistics Section */
+        .statistics {
+            background-color: var(--brand-blue);
+            color: var(--text-light);
+            padding: 64px 0;
             text-align: center;
-            margin-top: 1rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-green);
-            color: var(--text-main);
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 6px;
-            border: 1px solid var(--accent-gold);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(17, 100, 102, 0.3);
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
 
-        .cta-button:hover {
-            background-color: #0e4d4f;
-            transform: translateY(-2px);
+        .stat-item h3 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* 7. Final CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 991px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <header>
-            <h1>CONVERTISSEUR RECRUTEURS - SECTEUR IMMOBILIER</h1>
-            <p>Attirez l'élite des professionnels de l'immobilier au Maroc</p>
-        </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Recrutez l'élite du secteur <span class="highlight">Immobilier</span></h1>
+            <p>CoinCarrière connecte votre agence aux meilleurs profils spécialisés : agents, négociateurs et conseillers transactionnels à Casablanca, Rabat, Marrakech et Fès.</p>
+            <a href="https://coincarriere.com/register?type=company" class="btn" onclick="trackLead('HeroCTA')">Publier une offre gratuitement</a>
+        </div>
+    </section>
 
-        <div class="main-section">
-            
+    <section class="social-proof">
+        <div class="container">
+            <p>Rejoignez un réseau de confiance qui compte déjà <strong>+451 entreprises</strong> partenaires à travers le Royaume.</p>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Comment ça fonctionne ?</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h3>Publiez</h3>
+                    <p>Définissez votre besoin et votre profil en moins de 3 minutes.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h3>Recevez</h3>
+                    <p>Accédez immédiatement à des candidats présélectionnés et qualifiés.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h3>Évaluez</h3>
+                    <p>Comparez les profils et contactez les talents.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h3>Embauchez</h3>
+                    <p>Intégrez l'agent idéal au sein de votre agence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Pourquoi les agences nous font confiance</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h4>Ciblage Ultra-Local</h4>
+                    <p>Accédez à une base de données de candidats qualifiés selon votre zone géographique (Casa-Anfa, Rabat-Agdal, Marrakech, Fès).</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Prise de Poste Rapide</h4>
+                    <p>Recrutez des commerciaux déjà formés à la prospection, aux ventes et au suivi client.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏰</div>
+                    <h4>Gain de Temps</h4>
+                    <p>Fini le tri interminable de CV. CoinCarrière automatise et filtre vos profils de manière intelligente.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h4>Visibilité Premium</h4>
+                    <p>Mettez en valeur votre image de marque auprès des meilleurs agents du secteur immobilier.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h4>Suivi d'Onboarding</h4>
+                    <p>Notre équipe RH vous accompagne dans la réussite des premiers mois d'intégration de vos collaborateurs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h4>Sécurité des Données</h4>
+                    <p>Un environnement 100% professionnel, dédié exclusivement aux métiers de l'immobilier.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container grid-container">
             <div class="testimonials-column">
-                <div class="section-title">Ils ont recruté avec succès</div>
-                
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100&q=80" alt="Alexadea Janniri" class="testimonial-img">
                         <div class="testimonial-info">
-                            <h3>Alexadea Janniri</h3>
-                            <p>Agent Commercial Senior, Casa-Anfa</p>
+                            <h5>Alexadea Janniri</h5>
+                            <span>Agent Commercial Senior, Casa-Anfa</span>
                         </div>
                     </div>
-                    <p class="testimonial-quote">"Recrutement ultra-rapide ! CoinCarrière nous a permis de trouver un agent commercial immédiatement opérationnel pour notre agence de Casablanca."</p>
+                    <p class="testimonial-quote">"Recrutement ultra-rapide ! CoinCarrière nous a permis de trouver un agent commercial immédiatement opérationnel pour notre agence."</p>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100&q=80" alt="Marina Rabat" class="testimonial-img">
                         <div class="testimonial-info">
-                            <h3>Marina Rabat</h3>
-                            <p>Négociateur Immobilier, Rabat-Agdal</p>
+                            <h5>Marina Rabat</h5>
+                            <span>Négociateur Immobilier, Rabat-Agdal</span>
                         </div>
                     </div>
-                    <p class="testimonial-quote">"Des profils qualifiés ! La plateforme CoinCarrière Immeuble a facilité le recrutement de notre nouvelle équipe en un temps record."</p>
+                    <p class="testimonial-quote">"Des profils qualifiés ! CoinCarrière a facilité le recrutement de notre nouvelle équipe pour le marché du Haut-Standing."</p>
                 </div>
             </div>
 
             <div class="video-column">
-                <div class="section-title">Comment nous simplifions votre recrutement</div>
-                
+                <h3 style="font-size: 1.25rem; margin-bottom: 20px; color: var(--text-dark);">Découvrez comment simplifier votre recrutement</h3>
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&rel=0" title="Hind, Assistante RH" allowfullscreen></iframe>
                 </div>
+                <p class="video-caption">
+                    <strong>Hind, 30 ans, Assistante RH</strong>, vous explique le fonctionnement de la plateforme CoinCarrière.
+                </p>
+            </div>
+        </div>
+    </section>
 
-                <div class="video-overlay-text">
-                    <strong>Hind (30 ans), Assistante RH,</strong> vous explique notre processus en détail.
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>24-48h</h3>
+                    <p>Temps moyen pour identifier votre candidat idéal</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+3,500</h3>
+                    <p>Profils d'agents et conseillers dans notre base</p>
+                </div>
+                <div class="stat-item">
+                    <h3>97%</h3>
+                    <p>Taux de satisfaction de nos agences partenaires</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="cta-container">
-            <a href="https://coincarriere.com/register?type=company" class="cta-button" target="_blank">
-                PUBLIER UNE OFFRE D'EMPLOI GRATUITEMENT
-            </a>
+    <section class="final-cta">
+        <div class="container">
+            <h2>Prêt à transformer vos processus de recrutement ?</h2>
+            <a href="https://coincarriere.com/register?type=company" class="btn" onclick="trackLead('FinalCTA')">Publier une offre gratuitement</a>
         </div>
+    </section>
 
-    </div>
-
+    <script>
+        function trackLead(location) {
+            // Remplacer 'VOTRE_ID' par votre véritable ID de Pixel
+            const pixelId = 'VOTRE_ID';
+            console.log(`Track Lead Event for: ${location} | Pixel: ${pixelId}`);
+            
+            // Logique de tracking standard Meta Pixel :
+            // if (typeof fbq !== 'undefined') {
+            //     fbq('track', 'Lead', { source: location, sector: 'Immobilier' });
+            // }
+        }
+    </script>
 </body>
 </html>
+        
             
-            
-         
            
-         
+
+      
+      
+           
+           
+
+               
