@@ -3,579 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinCarrière | Recrutement Immobilier au Maroc</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'VOTRE_ID');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=VOTRE_ID&ev=Lead&noscript=1"
-    /></noscript>
+    <title>Coin Carrière</title>
     <style>
-        :root {
-            --bg-color: #030A18; /* Bleu nuit très sombre */
-            --primary-color: #3B82F6; /* Bleu électrique lumineux */
-            --primary-hover: #2563EB;
-            --accent-color: #b4dc02; /* Vert lime */
-            --text-main: #FFFFFF;
-            --text-secondary: #94A3B8;
-            --card-bg: rgba(59, 130, 246, 0.04);
-            --card-border: rgba(59, 130, 246, 0.2);
-        }
-
+        /* Reset de base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            background-color: #0F172A;
+            color: #FFFFFF;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* 1. Header / Logo */
-        .header-top {
-            padding: 32px 0;
+        /* Section Hero */
+        .hero-section {
+            background-color: #0F172A; /* Fond bleu foncé */
+            color: #FFFFFF; /* Texte blanc */
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 3px solid #2563EB; /* Bordure bleue */
+            min-height: 80vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 1.35rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .logo-img {
-            height: 44px;
-            width: 44px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 14px;
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
-        }
-
-        /* 2. Hero Section */
-        .hero {
-            text-align: center;
-            padding: 64px 0 36px 0;
-            max-width: 850px;
+        .hero-container {
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background-color: rgba(180, 220, 2, 0.15);
-            color: var(--accent-color);
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.82rem;
+        .hero-section h1 {
+            color: #FFFFFF; /* Titre blanc */
+            font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 24px;
-            letter-spacing: 0.04em;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            margin-bottom: 18px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.08rem;
-            color: var(--text-secondary);
-            margin-bottom: 36px;
-            max-width: 680px;
+        .hero-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #E2E8F0; /* Blanc cassé / Gris très clair */
+            margin-bottom: 40px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
 
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
         .btn-primary {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--text-main);
-            padding: 18px 42px;
-            border-radius: 12px;
-            font-size: 1.05rem;
-            font-weight: 700;
+            background-color: #2563EB; /* Bouton en bleu vif */
+            color: #FFFFFF; /* Texte blanc */
+            padding: 14px 36px;
+            font-size: 1rem;
+            font-weight: 600;
             text-decoration: none;
-            box-shadow: 0 8px 28px rgba(59, 130, 246, 0.35);
-            transition: all 0.25s ease;
-            border: none;
-            cursor: pointer;
-            line-height: 1.2;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 36px rgba(59, 130, 246, 0.45);
+            background-color: #1D4ED8; /* Bleu plus foncé au survol */
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transform: translateY(-2px);
         }
 
-        .btn-mention {
-            display: block;
-            margin-top: 12px;
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-        }
-
-        /* 3. Preuve sociale */
-        .social-proof {
-            padding: 28px 0;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .social-proof p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        .social-proof span {
-            color: var(--accent-color);
-            font-weight: 700;
-        }
-
-        /* Section Header commun */
-        .section-header {
-            text-align: center;
-            margin-bottom: 54px;
-        }
-
-        .section-header h2 {
-            font-size: 2.3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
-
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* 4. Processus 4 étapes */
-        .process {
-            padding: 72px 0;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .process-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 18px;
-            padding: 32px 22px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .process-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
-        }
-
-        .step-number {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--text-main);
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            font-weight: 700;
-            line-height: 38px;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .process-card h3 {
-            font-size: 1.15rem;
+        .btn-secondary {
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 1px solid #2563EB; /* Bordure bleue */
+            padding: 13px 34px;
+            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: #FFFFFF;
-        }
-
-        .process-card p {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* 5. Avantages (6 blocs) */
-        .benefits {
-            padding: 64px 0;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .benefit-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 32px;
+            text-decoration: none;
+            border-radius: 4px;
             transition: all 0.3s ease;
         }
 
-        .benefit-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-4px);
-        }
-
-        .benefit-card h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 14px;
-            color: #FFFFFF;
-        }
-
-        .benefit-card p {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* 6. Section Vidéo */
-        .testimonial-section {
-            padding: 64px 0;
-        }
-
-        .testimonial-container {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 48px;
-            max-width: 960px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .testimonial-text {
-            flex: 1;
-        }
-
-        .testimonial-badge {
-            display: inline-block;
-            color: var(--accent-color);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-            background: rgba(180, 220, 2, 0.1);
-            padding: 4px 10px;
-            border-radius: 8px;
-        }
-
-        .testimonial-quote {
-            font-size: 1.2rem;
-            font-weight: 500;
-            line-height: 1.55;
-            margin-bottom: 28px;
-            color: #E2E8F0;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: var(--text-main);
-        }
-
-        .testimonial-author span {
-            display: block;
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            margin-top: 3px;
-        }
-
-        .testimonial-media {
-            flex: 1;
-            max-width: 420px;
-        }
-
-        .testimonial-media video {
-            width: 100%;
-            border-radius: 16px;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-            outline: none;
-            background-color: #000;
-        }
-
-        /* 7. Statistiques */
-        .stats {
-            padding: 64px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 6px;
-            letter-spacing: -0.03em;
-        }
-
-        .stat-item p {
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-            font-weight: 500;
-        }
-
-        /* 8. CTA Final */
-        .final-cta {
-            padding: 96px 0;
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 18px;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, #FFFFFF 0%, #60A5FA 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .final-cta p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            max-width: 600px;
-            margin: 0 auto 36px auto;
-            line-height: 1.6;
-        }
-
-        /* Footer */
-        .footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            padding: 40px 0;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.78rem;
+        .btn-secondary:hover {
+            background-color: rgba(37, 99, 235, 0.2);
+            transform: translateY(-2px);
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.3rem;
+            .hero-section h1 {
+                font-size: 2.5rem;
             }
-            .process-grid, .benefits-grid {
-                grid-template-columns: 1fr;
+            .hero-section p {
+                font-size: 1rem;
             }
-            .testimonial-container {
+            .hero-buttons {
                 flex-direction: column;
-                gap: 32px;
-                padding: 24px;
+                gap: 15px;
             }
-            .testimonial-media {
-                max-width: 100%;
-            }
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .final-cta h2 {
-                font-size: 1.9rem;
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header class="header-top">
-            <a href="#" class="logo-area">
-                <img src="COIN CARRIERE LOGO.jpg" alt="CoinCarrière Logo" class="logo-img" />
-                <span>CoinCarrière</span>
-            </a>
-        </header>
-
-        <section class="hero">
-            <span class="hero-badge">Le n°1 du recrutement immobilier au Maroc</span>
-            <h1>Recrutez les meilleurs talents <br> de l'immobilier au Maroc.</h1>
-            <p>La plateforme intelligente pour les agences à Casablanca, Marrakech et Rabat. Trouvez des profils RH et commerciaux vérifiés en un temps record.</p>
-            <a href="https://coincarriere.com/register?type=company" class="btn-primary" onclick="fbq('track', 'Lead');">Créer mon compte recruteur</a>
-            <span class="btn-mention">C'est 100% gratuit pour publier vos offres</span>
-        </section>
-
-        <section class="social-proof">
-            <p>Rejoignez plus de <span>+451 entreprises et agences</span> qui recrutent avec succès sur CoinCarrière.</p>
-        </section>
-
-        <section class="process">
-            <div class="section-header">
-                <h2>Comment ça marche ?</h2>
-                <p>Quatre étapes simples pour trouver vos futurs collaborateurs.</p>
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1>Coin Carrière</h1>
+            <p>Le réseau d'excellence pour les talents de l'immobilier et de l'entreprise.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Nous Rejoindre</a>
+                <a href="#services" class="btn-secondary">En Savoir Plus</a>
             </div>
-            <div class="process-grid">
-                <div class="process-card">
-                    <span class="step-number">1</span>
-                    <h3>Publiez</h3>
-                    <p>Déposez votre offre d'emploi en moins de 2 minutes sur notre plateforme dédiée au secteur.</p>
-                </div>
-                <div class="process-card">
-                    <span class="step-number">2</span>
-                    <h3>Recevez</h3>
-                    <p>Notre algorithme sélectionne les profils les plus pertinents disponibles sur le marché.</p>
-                </div>
-                <div class="process-card">
-                    <span class="step-number">3</span>
-                    <h3>Évaluez</h3>
-                    <p>Comparez facilement les compétences et l'expérience des candidats vérifiés.</p>
-                </div>
-                <div class="process-card">
-                    <span class="step-number">4</span>
-                    <h3>Embauchez</h3>
-                    <p>Contactez le talent idéal et intégrez-le au sein de votre agence immobilière.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="benefits">
-            <div class="section-header">
-                <h2>Pourquoi nous choisir ?</h2>
-                <p>Des fonctionnalités pensées pour les recruteurs du secteur.</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>Matching IA</h3>
-                    <p>Notre technologie analyse vos besoins et vous propose des profils qui correspondent à 100% à votre culture d'agence.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Profils vérifiés</h3>
-                    <p>Chaque candidat est validé et vérifié par nos équipes pour s'assurer de sa fiabilité.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Expertise locale</h3>
-                    <p>Un réseau de talents spécialisés dans les zones stratégiques : Casablanca, Marrakech, Rabat et Fès.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Gain de temps</h3>
-                    <p>Réduisez votre temps de recrutement de 70% grâce à une présélection de candidats qualifiés.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>CVthèque accessible</h3>
-                    <p>Accédez à une base de données exclusive de commerciaux, négociateurs et assistantes.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Support dédié</h3>
-                    <p>Une équipe disponible au Maroc pour vous accompagner dans vos recherches et vos recrutements.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonial-section">
-            <div class="testimonial-container">
-                <div class="testimonial-text">
-                    <span class="testimonial-badge">Success Story</span>
-                    <p class="testimonial-quote">"J'ai trouvé le profil idéal en moins de 48h. En tant qu'assistante RH dans une agence immobilière en pleine croissance, la pression du recrutement était énorme. CoinCarrière a simplifié tout mon processus de sélection."</p>
-                    <div class="testimonial-author">
-                        Leila Mansouri
-                        <span>Assistante RH Senior, 30 ans — Casablanca</span>
-                    </div>
-                </div>
-                <div class="testimonial-media">
-                    <video controls width="100%">
-                        <source src="video-placeholder.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>+451</h3>
-                    <p>Entreprises au Maroc</p>
-                </div>
-                <div class="stat-item">
-                    <h3>-70%</h3>
-                    <p>Temps de recrutement</p>
-                </div>
-                <div class="stat-item">
-                    <h3>+4500</h3>
-                    <p>Candidats qualifiés</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="final-cta">
-            <h2>Prêt à transformer votre recrutement ?</h2>
-            <p>Rejoignez les agences qui font confiance à CoinCarrière pour trouver les meilleurs talents de l'immobilier. Créez votre compte recruteur gratuitement.</p>
-            <a href="https://coincarriere.com/register?type=company" class="btn-primary" onclick="fbq('track', 'Lead');">Créer mon compte recruteur</a>
-        </section>
-
-        <footer class="footer">
-            &copy; 2026 CoinCarrière Maroc. Plateforme de recrutement immobilier n°1. Tous droits réservés.
-        </footer>
-    </div>
+        </div>
+    </section>
 
 </body>
 </html>
-            
+       
       
