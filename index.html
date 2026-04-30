@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoinCarrière | Recrutement Immobilier Intelligent au Maroc</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050B08; /* Fond très sombre */
-            --primary-color: #10B981; /* Vert émeraude */
-            --accent-color: #D4AF37; /* Or pour le contraste */
+            --bg-color: #050B14; /* Fond bleu nuit très sombre */
+            --primary-color: #0084FF; /* Bleu ciel vif */
+            --secondary-color: #1E40AF; /* Bleu royal intense */
+            --accent-color: #FFFFFF;
             --text-main: #FFFFFF;
-            --text-secondary: #9CA3AF;
-            --card-bg: rgba(255, 255, 255, 0.03);
+            --text-secondary: #94A3B8;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.1);
         }
 
         * {
@@ -25,7 +27,7 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.5;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -41,7 +43,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 24px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid var(--card-border);
         }
 
         .navbar-logo {
@@ -64,9 +66,9 @@
             width: 42px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 12px;
-            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2);
-            transition: transform 0.2s ease-in-out;
+            margin-right: 14px;
+            box-shadow: 0 6px 20px rgba(0, 132, 255, 0.25);
+            transition: transform 0.25s ease;
         }
 
         .logo-img:hover {
@@ -93,10 +95,10 @@
 
         .btn-trial {
             background-color: transparent;
-            border: 1px solid var(--primary-color);
+            border: 1.5px solid var(--primary-color);
             color: var(--primary-color);
-            padding: 8px 20px;
-            border-radius: 6px;
+            padding: 8px 22px;
+            border-radius: 8px;
             font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
@@ -107,42 +109,46 @@
         .btn-trial:hover {
             background-color: var(--primary-color);
             color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 132, 255, 0.4);
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
             padding: 100px 0 80px 0;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .hero-badge {
             display: inline-block;
-            background-color: rgba(16, 185, 129, 0.1);
+            background-color: rgba(0, 132, 255, 0.12);
             color: var(--primary-color);
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 24px;
-            letter-spacing: 0.02em;
+            margin-bottom: 28px;
+            letter-spacing: 0.03em;
             text-transform: uppercase;
         }
 
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.04em;
             margin-bottom: 20px;
-            line-height: 1.1;
+            line-height: 1.15;
+            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
             font-size: 1.15rem;
             color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 650px;
+            margin-bottom: 44px;
+            max-width: 680px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -154,82 +160,101 @@
         }
 
         .btn-primary, .btn-secondary {
-            padding: 14px 28px;
-            border-radius: 8px;
+            padding: 14px 30px;
+            border-radius: 10px;
             font-weight: 600;
             font-size: 0.95rem;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
 
         .btn-primary {
             background-color: var(--primary-color);
-            color: #000000;
+            color: #FFFFFF;
             border: none;
+            box-shadow: 0 4px 20px rgba(0, 132, 255, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: #059669;
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+            background-color: #0066CC;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
             background-color: var(--card-bg);
             color: var(--text-main);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--card-border);
         }
 
         .btn-secondary:hover {
-            border-color: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
         }
 
-        /* Testimonial Section */
-        .testimonial {
+        /* Testimonials Section */
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .testimonials-header p {
+            color: var(--text-secondary);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 100px;
+        }
+
+        .testimonial-card {
             background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto 80px auto;
+            border: 1px solid var(--card-border);
+            padding: 36px 32px;
+            border-radius: 18px;
             display: flex;
-            align-items: center;
-            gap: 32px;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .testimonial-text {
-            flex: 1;
+        .testimonial-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 132, 255, 0.1);
         }
 
         .testimonial-quote {
-            font-size: 1.25rem;
-            font-weight: 500;
+            font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
+            color: #E2E8F0;
         }
 
         .testimonial-author {
             font-weight: 600;
+            font-size: 0.95rem;
             color: var(--text-main);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 16px;
         }
 
         .testimonial-author span {
             display: block;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             font-weight: 400;
             margin-top: 4px;
-        }
-
-        .testimonial-media {
-            flex: 1;
-            max-width: 350px;
-        }
-
-        .testimonial-media video {
-            width: 100%;
-            border-radius: 10px;
-            outline: none;
         }
 
         /* Features Section */
@@ -257,14 +282,14 @@
 
         .feature-card {
             background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 32px;
-            border-radius: 16px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            border: 1px solid var(--card-border);
+            padding: 36px 32px;
+            border-radius: 18px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .feature-card:hover {
-            border-color: var(--primary-color);
+            border-color: var(--secondary-color);
             transform: translateY(-4px);
         }
 
@@ -278,13 +303,13 @@
         .feature-card p {
             font-size: 0.9rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* Footer */
         .footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 40px 0;
+            border-top: 1px solid var(--card-border);
+            padding: 44px 0;
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.85rem;
@@ -293,24 +318,15 @@
         /* Responsive */
         @media (max-width: 768px) {
             .navbar-links {
-                display: none; /* Simplification pour mobile */
+                display: none;
             }
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
-            .testimonial {
-                flex-direction: column;
-                text-align: center;
-                padding: 28px;
-                margin: 0 16px 60px 16px;
-            }
-            .testimonial-media {
-                max-width: 100%;
-            }
-            .features-grid {
+            .testimonials-grid, .features-grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 0 16px;
+                gap: 20px;
+                padding: 0 8px;
             }
         }
     </style>
@@ -327,7 +343,7 @@
             </div>
             <div class="navbar-links">
                 <a href="#solutions">Solutions</a>
-                <a href="#temoignage">Success Story</a>
+                <a href="#temoignages">Success Stories</a>
                 <a href="#contact" class="btn-trial">Essai Gratuit</a>
             </div>
         </nav>
@@ -339,23 +355,40 @@
             
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">Trouver un profil</a>
-                <a href="#video" class="btn-secondary">Voir la démo</a>
+                <a href="#solutions" class="btn-secondary">En savoir plus</a>
             </div>
         </header>
 
-        <section class="testimonial" id="temoignage">
-            <div class="testimonial-text">
-                <p class="testimonial-quote">"J'ai trouvé le profil idéal en moins de 48h. En tant qu'assistante RH dans une agence immobilière en pleine croissance, la pression du recrutement était énorme. CoinCarrière a simplifié tout mon processus de sélection."</p>
-                <div class="testimonial-author">
-                    Leila Mansouri
-                    <span>Assistante RH Senior, 30 ans — Casablanca</span>
-                </div>
+        <section class="testimonials" id="temoignages">
+            <div class="testimonials-header">
+                <h2>Ce que nos partenaires en disent</h2>
+                <p>Découvrez les retours d'assistantes et responsables RH au Maroc.</p>
             </div>
-            <div class="testimonial-media">
-                <video controls width="100%">
-                    <source src="video-placeholder.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Le matching IA nous a permis de réduire notre temps de recrutement de près de 70%. C'est un outil indispensable pour les agences qui cherchent des profils qualifiés rapidement à Casablanca."</p>
+                    <div class="testimonial-author">
+                        Leila Mansouri
+                        <span>Assistante RH Senior, 30 ans — Casablanca</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"L'expertise locale est tout simplement bluffante. L'algorithme comprend exactement nos besoins en ressources humaines dans le secteur immobilier, surtout dans les zones en pleine expansion à Marrakech."</p>
+                    <div class="testimonial-author">
+                        Sofia Benjelloun
+                        <span>Responsable Recrutement, 34 ans — Marrakech</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Une plateforme fluide et intuitive ! Nous avons pu intégrer trois nouveaux agents commerciaux en un temps record grâce à la précision des profils vérifiés."</p>
+                    <div class="testimonial-author">
+                        Yasmine Tazi
+                        <span>Directrice RH, 28 ans — Rabat</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -388,3 +421,7 @@
 
 </body>
 </html>
+
+     
+
+     
