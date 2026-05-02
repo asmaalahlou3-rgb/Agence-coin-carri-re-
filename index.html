@@ -130,7 +130,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 mb-16">
                         <div class="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col items-center text-center transition hover:shadow-md">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" alt="Malika Bennani" class="w-16 h-16 rounded-full object-cover mb-4 border-2 border-[#0077B6]">
                             <p class="text-gray-600 leading-relaxed mb-6 text-sm">
@@ -156,6 +156,47 @@
                             </p>
                             <div class="font-extrabold text-[#0F4C75] text-sm">Sofia Idrissi</div>
                             <div class="text-xs text-gray-400 mt-1">Fondatrice, Agence Prestige</div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto px-4 text-center">
+                        <h3 class="text-2xl font-extrabold text-gray-900 mb-4">Découvrez nos profils immobiliers les plus rares</h3>
+                        <p class="text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+                            Nous avons sélectionné une base de données de profils pré-qualifiés et très recherchés au Maroc. Cliquez ci-dessous pour révéler les profils exclusifs.
+                        </p>
+
+                        <div class="relative p-10 bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm max-w-3xl mx-auto">
+                            <div id="teaser-locked" class="absolute inset-0 bg-white/60 backdrop-blur-md flex flex-col justify-center items-center p-8 z-10 transition-all duration-500 rounded-3xl">
+                                <div class="w-16 h-16 bg-[#0077B6]/10 text-[#0077B6] rounded-full flex items-center justify-center mb-6 animate-bounce">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-3">Contenu réservé aux recruteurs VIP</h4>
+                                <p class="text-gray-500 max-w-md mx-auto mb-6 leading-relaxed">
+                                    Révélez instantanément les profils des meilleurs talents en un clic.
+                                </p>
+                                <button onclick="revealTeaser()" class="px-8 py-4 bg-[#0077B6] hover:bg-[#055184] text-white font-extrabold text-base rounded-xl shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                                    Déverrouiller l'accès
+                                </button>
+                            </div>
+
+                            <div id="teaser-unlocked" class="opacity-30 select-none pointer-events-none transition-all duration-500">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                                    <div class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100">
+                                        <span class="text-xs text-[#0077B6] font-extrabold uppercase">Profil #1</span>
+                                        <h5 class="text-base font-extrabold mt-1 mb-1">Directeur d'Agence - Casablanca</h5>
+                                        <p class="text-xs text-gray-400 mb-3">5 ans d'expérience • Réseau étendu</p>
+                                        <span class="inline-block px-3 py-0.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">Disponible</span>
+                                    </div>
+                                    <div class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100">
+                                        <span class="text-xs text-[#0077B6] font-extrabold uppercase">Profil #2</span>
+                                        <h5 class="text-base font-extrabold mt-1 mb-1">Expert en Vente - Marrakech</h5>
+                                        <p class="text-xs text-gray-400 mb-3">3 ans d'expérience • Négociation</p>
+                                        <span class="inline-block px-3 py-0.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">Disponible</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -364,7 +405,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4" dir="rtl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 mb-16" dir="rtl">
                         <div class="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col items-center text-center transition hover:shadow-md">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" alt="Malika Bennani" class="w-16 h-16 rounded-full object-cover mb-4 border-2 border-[#0077B6]">
                             <p class="text-gray-600 leading-relaxed mb-6 text-sm">
@@ -390,6 +431,47 @@
                             </p>
                             <div class="font-extrabold text-[#0F4C75] text-sm">سوفيا الإدريسي</div>
                             <div class="text-xs text-gray-400 mt-1">مؤسسة، وكالة بريستيج</div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto px-4 text-center">
+                        <h3 class="text-2xl font-extrabold text-gray-900 mb-4">اكتشف أهم الكفاءات العقارية لدينا</h3>
+                        <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+                            لقد اخترنا لكم قاعدة بيانات تضم أهم الكفاءات المطلوبة في المغرب. اضغط أدناه للكشف عن المحتوى الحصري.
+                        </p>
+
+                        <div class="relative p-10 bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm max-w-3xl mx-auto">
+                            <div id="teaser-locked-ar" class="absolute inset-0 bg-white/60 backdrop-blur-md flex flex-col justify-center items-center p-8 z-10 transition-all duration-500 rounded-3xl">
+                                <div class="w-16 h-16 bg-[#0077B6]/10 text-[#0077B6] rounded-full flex items-center justify-center mb-6 animate-bounce">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-3">محتوى مخصص للشركاء المميزين</h4>
+                                <p class="text-gray-500 max-w-md mx-auto mb-6 leading-relaxed">
+                                    سجل في قائمة الأولوية لفتح بيانات الاتصال الخاصة بأفضل الكفاءات لدينا بنقرة واحدة.
+                                </p>
+                                <button onclick="revealTeaser()" class="px-8 py-4 bg-[#0077B6] hover:bg-[#055184] text-white font-extrabold text-base rounded-xl shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                                    إظهار المحتوى
+                                </button>
+                            </div>
+
+                            <div id="teaser-unlocked-ar" class="opacity-30 select-none pointer-events-none transition-all duration-500">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-right">
+                                    <div class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100">
+                                        <span class="text-xs text-[#0077B6] font-extrabold uppercase">الملف #1</span>
+                                        <h5 class="text-base font-extrabold mt-1 mb-1">مدير وكالة - الدار البيضاء</h5>
+                                        <p class="text-xs text-gray-400 mb-3">5 سنوات من الخبرة • شبكة واسعة</p>
+                                        <span class="inline-block px-3 py-0.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">متاح</span>
+                                    </div>
+                                    <div class="p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100">
+                                        <span class="text-xs text-[#0077B6] font-extrabold uppercase">الملف #2</span>
+                                        <h5 class="text-base font-extrabold mt-1 mb-1">خبير مبيعات - مراكش</h5>
+                                        <p class="text-xs text-gray-400 mb-3">3 سنوات من الخبرة • مهارات التفاوض</p>
+                                        <span class="inline-block px-3 py-0.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">متاح</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -541,6 +623,35 @@
                 // Style button
                 btnFr.className = "px-3 py-1.5 text-sm font-semibold rounded-lg bg-[#0077B6] text-white shadow-sm transition";
                 btnAr.className = "px-3 py-1.5 text-sm font-semibold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition";
+            }
+        }
+
+        function revealTeaser() {
+            // French version elements
+            const lockedFr = document.getElementById('teaser-locked');
+            const unlockedFr = document.getElementById('teaser-unlocked');
+            
+            if (lockedFr) {
+                lockedFr.style.opacity = '0';
+                lockedFr.style.visibility = 'hidden';
+                unlockedFr.classList.remove('opacity-30', 'select-none', 'pointer-events-none');
+                unlockedFr.classList.add('opacity-100');
+            }
+
+            // Arabic version elements
+            const lockedAr = document.getElementById('teaser-locked-ar');
+            const unlockedAr = document.getElementById('teaser-unlocked-ar');
+            
+            if (lockedAr) {
+                lockedAr.style.opacity = '0';
+                lockedAr.style.visibility = 'hidden';
+                unlockedAr.classList.remove('opacity-30', 'select-none', 'pointer-events-none');
+                unlockedAr.classList.add('opacity-100');
+            }
+
+            // Triggers Pixel Event as lead action
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
             }
         }
     </script>
