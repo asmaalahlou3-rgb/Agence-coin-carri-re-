@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinCarrière | Recrutement Immobilier au Maroc</title>
+    <title>CoinCarrière | Recrutement Immobilier</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,201 +16,476 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'VOTRE_ID'); // Remplacez VOTRE_ID par votre ID Meta Pixel
+        fbq('init', 'VOTRE_ID'); // Remplacez VOTRE_ID par votre ID
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=VOTRE_ID&ev=PageView&noscript=1"
     /></noscript>
+    
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-900 antialiased transition-all duration-300" dir="ltr" id="page-body">
 
-    <header class="bg-[#0077B6] text-white py-20 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
-        <div class="max-w-5xl mx-auto flex flex-col items-center">
-            <img src="LOGO.png" alt="CoinCarrière Logo" class="h-16 w-auto mb-8 bg-white/10 p-2 rounded-xl backdrop-blur-sm shadow-md">
-            
-            <span class="text-sm uppercase tracking-wider text-[#b4dc02] font-semibold">CoinCarrière</span>
-            <h1 class="mt-4 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
-                Recrutez les meilleurs talents <br/>
-                <span class="text-[#b4dc02]">de l'immobilier au Maroc</span>
-            </h1>
-            <p class="mt-6 text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
-                La plateforme de recrutement spécialisée pour connecter promoteurs, agences et experts du secteur. 
-            </p>
-            <p class="mt-2 text-sm text-gray-200 tracking-wide">
-                * Gratuit pour les premières offres d'emploi publiées.
-            </p>
-            <div class="mt-10">
+    <div class="w-full bg-white border-b border-gray-100 py-3 px-6 flex justify-end items-center gap-4">
+        <button onclick="switchLanguage('fr')" id="btn-fr" class="px-3 py-1.5 text-sm font-semibold rounded-lg bg-[#0077B6] text-white shadow-sm transition">
+            FR
+        </button>
+        <button onclick="switchLanguage('ar')" id="btn-ar" class="px-3 py-1.5 text-sm font-semibold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition">
+            AR
+        </button>
+    </div>
+
+    <div id="lang-fr-wrapper">
+        <header class="bg-gradient-to-r from-[#0F4C75] to-[#0077B6] text-white py-20 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-5xl mx-auto flex flex-col items-center">
+                <img src="LOGO.png" alt="CoinCarrière Logo" class="h-16 w-auto mb-8 bg-white/10 p-3 rounded-2xl backdrop-blur-md shadow-lg border border-white/10">
+                
+                <span class="text-sm uppercase tracking-widest text-[#3282B8] font-bold bg-white/10 px-4 py-1 rounded-full mb-6">
+                    Plateforme de Recrutement
+                </span>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto mb-6 animate-fade-in">
+                    Recrutez plus vite avec les <br>
+                    <span class="text-[#b4dc02]">bons candidats</span>
+                </h1>
+                
+                <p class="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-10">
+                    Gagnez du temps et trouvez des profils qualifiés en quelques clics.
+                </p>
+
+                <div>
+                    <a href="https://coincarriere.com/register?type=company" 
+                       onclick="fbq('track', 'Lead');"
+                       class="px-10 py-5 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0F4C75] font-extrabold text-lg rounded-2xl shadow-[0_20px_50px_rgba(180,220,2,0.3)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                        Commencer
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 mb-6">
+                    Recruter dans l'immobilier est devenu un défi complexe
+                </h2>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto mb-16 leading-relaxed">
+                    Les processus traditionnels sont lents et attirent trop de candidats non qualifiés, ce qui coûte du temps et de l'argent aux recruteurs.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm text-left">
+                        <div class="w-12 h-12 bg-red-500/10 text-red-500 rounded-2xl flex items-center justify-center font-bold text-xl mb-6">✕</div>
+                        <h3 class="text-xl font-bold mb-3">Processus chronophage</h3>
+                        <p class="text-gray-500 leading-relaxed">Trier des centaines de CV non pertinents fait perdre des heures précieuses à votre équipe RH.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm text-left">
+                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center font-bold text-xl mb-6">✕</div>
+                        <h3 class="text-xl font-bold mb-3">Profils non qualifiés</h3>
+                        <p class="text-gray-500 leading-relaxed">Manque de compétences spécifiques sur le marché cible au Maroc, en particulier dans l'immobilier.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm text-left">
+                        <div class="w-12 h-12 bg-blue-500/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">✕</div>
+                        <h3 class="text-xl font-bold mb-3">Coûts élevés</h3>
+                        <p class="text-gray-500 leading-relaxed">Les solutions génériques coûtent cher pour des résultats en recrutement souvent médiocres.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-[#0F4C75] text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-extrabold tracking-tight mb-6 leading-tight">
+                        La solution évidente : <br>
+                        <span class="text-[#b4dc02]">CoinCarrière</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        CoinCarrière centralise les meilleurs talents et met en relation les managers et promoteurs avec les agents et experts dont ils ont besoin. Simple, direct, et orienté résultats.
+                    </p>
+                    <a href="https://coincarriere.com/register?type=company" 
+                       onclick="fbq('track', 'Lead');"
+                       class="px-8 py-4 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0F4C75] font-extrabold text-base rounded-xl shadow-2xl transition-all duration-300 inline-block">
+                        Réserver une démo
+                    </a>
+                </div>
+                <div class="bg-[#3282B8]/20 border border-[#3282B8]/30 p-10 rounded-3xl backdrop-blur-sm">
+                    <p class="text-2xl font-extrabold mb-6">Vos résultats en hausse</p>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-center gap-3">✓ Ciblage géographique au Maroc</li>
+                        <li class="flex items-center gap-3">✓ Intégration Meta Pixel de suivi</li>
+                        <li class="flex items-center gap-3">✓ Communication dédiée au secteur immobilier</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                        Fonctionnalités clés
+                    </h2>
+                    <p class="text-lg text-gray-500">Des outils pensés pour les professionnels de l'immobilier.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">01</div>
+                        <h3 class="text-xl font-bold mb-3">Marché Cible Maroc</h3>
+                        <p class="text-gray-500 leading-relaxed">Visibilité dans les grandes villes : Casablanca, Rabat, Marrakech et Fès.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">02</div>
+                        <h3 class="text-xl font-bold mb-3">Suivi Publicitaire</h3>
+                        <p class="text-gray-500 leading-relaxed">Intégration Meta Pixel pour mesurer les conversions et optimiser vos funnels.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">03</div>
+                        <h3 class="text-xl font-bold mb-3">Funnels Stratégiques</h3>
+                        <p class="text-gray-500 leading-relaxed">Parcours optimisé (TOF, MOF, BOF) pour attirer les candidats idéaux.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">04</div>
+                        <h3 class="text-xl font-bold mb-3">Copywriting Persuasif</h3>
+                        <p class="text-gray-500 leading-relaxed">Annonces conçues pour engager et convertir les meilleurs experts du secteur.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">05</div>
+                        <h3 class="text-xl font-bold mb-3">Interface Premium</h3>
+                        <p class="text-gray-500 leading-relaxed">Design élégant qui met en valeur le caractère haut de gamme de votre marque.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6">06</div>
+                        <h3 class="text-xl font-bold mb-3">Assistance RH</h3>
+                        <p class="text-gray-500 leading-relaxed">Support dédié pour paramétrer et suivre vos offres d'emploi efficacement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                        Comment ça fonctionne
+                    </h2>
+                    <p class="text-lg text-gray-500">Un processus direct et sans friction en trois étapes simples.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#0077B6] transition">
+                        <span class="text-sm font-extrabold text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-lg">Étape 1</span>
+                        <h3 class="text-xl font-bold mt-6 mb-3">Publiez</h3>
+                        <p class="text-gray-500 leading-relaxed">Déposez votre offre d'emploi en quelques clics via l'interface recruteur.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#0077B6] transition">
+                        <span class="text-sm font-extrabold text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-lg">Étape 2</span>
+                        <h3 class="text-xl font-bold mt-6 mb-3">Recevez et Évaluez</h3>
+                        <p class="text-gray-500 leading-relaxed">Recevez des profils qualifiés et analysez les compétences du marché.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#b4dc02] transition">
+                        <span class="text-sm font-extrabold text-[#0077B6] bg-[#b4dc02]/20 px-3 py-1 rounded-lg">Étape 3</span>
+                        <h3 class="text-xl font-bold mt-6 mb-3">Embauchez</h3>
+                        <p class="text-gray-500 leading-relaxed">Finalisez l'embauche du collaborateur idéal pour votre agence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+                        Notre approche en action
+                    </h2>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                        Découvrez comment nous aidons les recruteurs du secteur immobilier.
+                    </p>
+                </div>
+
+                <div class="flex justify-center mb-20">
+                    <div class="w-full max-w-4xl aspect-video rounded-3xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.15)] border-2 border-emerald-500/10">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://app.heygen.com/embeds/f8f7b2201d8b4bedb26edc265cef43ab" 
+                            title="Présentation CoinCarrière" 
+                            frameborder="0" 
+                            allow="encrypted-media; fullscreen;" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="max-w-3xl mx-auto text-center p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm">
+                    <p class="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed mb-8">
+                        "CoinCarrière nous a permis de réduire de moitié le temps nécessaire pour recruter des managers d'agence à Casablanca. Le ciblage est parfait."
+                    </p>
+                    <div class="font-bold text-[#0F4C75] text-lg">Malika Bennani</div>
+                    <div class="text-sm text-gray-400 mt-1">Consultante Senior</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-r from-[#0077B6] to-[#0F4C75] text-white text-center px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Prêt à propulser <br> vos recrutements ?
+                </h2>
+                <p class="text-xl text-gray-200 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Rejoignez dès aujourd'hui les entreprises qui font confiance à CoinCarrière pour bâtir leurs équipes au Maroc.
+                </p>
                 <a href="https://coincarriere.com/register?type=company" 
                    onclick="fbq('track', 'Lead');"
-                   class="px-8 py-4 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0077B6] font-bold text-lg rounded-xl shadow-2xl transition transform hover:-translate-y-0.5 inline-block">
-                    Créer mon compte recruteur
+                   class="px-10 py-6 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0F4C75] font-extrabold text-lg rounded-2xl shadow-[0_20px_50px_rgba(180,220,2,0.3)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                    Commencer
                 </a>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <section class="py-12 bg-white border-b border-gray-100 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <p class="text-gray-500 font-medium text-lg">
-                Rejoignez la confiance de <span class="text-[#0077B6] font-bold">+451 entreprises</span> qui utilisent CoinCarrière pour leurs recrutements.
-            </p>
-            <div class="flex justify-center items-center gap-8 mt-6 flex-wrap opacity-60">
-                <span>Casablanca</span>
-                <span>Rabat</span>
-                <span>Marrakech</span>
-                <span>Fès</span>
-            </div>
-        </div>
-    </section>
+        <footer class="bg-gray-50 border-t border-gray-100 py-12 text-center text-sm text-gray-400">
+            <p>&copy; 2026 CoinCarrière. Tous droits réservés.</p>
+        </footer>
+    </div>
 
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Notre processus de recrutement</h2>
-                <p class="mt-4 text-lg text-gray-500">Un parcours simple et efficace pour trouver vos collaborateurs.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#0077B6]">
-                    <div class="text-3xl font-bold text-[#0077B6] mb-4">01</div>
-                    <h3 class="text-xl font-bold mb-3">Publiez</h3>
-                    <p class="text-gray-500 leading-relaxed">Publiez vos annonces immobilières en quelques minutes via notre interface optimisée.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#0077B6]">
-                    <div class="text-3xl font-bold text-[#0077B6] mb-4">02</div>
-                    <h3 class="text-xl font-bold mb-3">Recevez</h3>
-                    <p class="text-gray-500 leading-relaxed">Centralisez et recevez les candidatures de profils qualifiés pour votre secteur.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#b4dc02]">
-                    <div class="text-3xl font-bold text-[#0077B6] mb-4">03</div>
-                    <h3 class="text-xl font-bold mb-3">Évaluez</h3>
-                    <p class="text-gray-500 leading-relaxed">Filtrez les compétences et analysez l'adéquation des profils à vos projets.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-[#b4dc02]">
-                    <div class="text-3xl font-bold text-[#0077B6] mb-4">04</div>
-                    <h3 class="text-xl font-bold mb-3">Embauchez</h3>
-                    <p class="text-gray-500 leading-relaxed">Intégrez rapidement le meilleur talent au sein de vos équipes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Nos expertises et avantages</h2>
-                <p class="mt-4 text-lg text-gray-500">Des outils pensés pour les professionnels de l'immobilier.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-xl flex items-center justify-center mb-6 font-bold text-lg">01</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Marché Cible Maroc</h3>
-                    <p class="text-gray-500 leading-relaxed">Une visibilité accrue dans des pôles majeurs comme Casablanca, Rabat et Marrakech.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-xl flex items-center justify-center mb-6 font-bold text-lg">02</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Suivi publicitaire</h3>
-                    <p class="text-gray-500 leading-relaxed">Intégration et configuration du Meta Pixel pour mesurer les conversions de vos campagnes.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-xl flex items-center justify-center mb-6 font-bold text-lg">03</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Stratégies d'acquisition</h3>
-                    <p class="text-gray-500 leading-relaxed">Exploitation des funnels (TOF, MOF, BOF) pour optimiser l'ensemble de votre processus d'attraction.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-xl flex items-center justify-center mb-6 font-bold text-lg">04</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Copywriting persuasif</h3>
-                    <p class="text-gray-500 leading-relaxed">Des annonces rédigées pour susciter l'intérêt et convertir rapidement les meilleurs professionnels.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-xl flex items-center justify-center mb-6 font-bold text-lg">05</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Design haut de gamme</h3>
-                    <p class="text-gray-500 leading-relaxed">Une esthétique élégante et épurée mettant en valeur le caractère premium de votre agence.</p>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-xl flex items-center justify-center mb-6 font-bold text-lg">06</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Assistance dédiée</h3>
-                    <p class="text-gray-500 leading-relaxed">Un support personnalisé pour vous aider à paramétrer vos espaces recruteurs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="presentation-video" class="py-16 bg-white border-t border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 font-serif">
-                    Découvrez notre approche en action
-                </h2>
-                <p class="mt-4 text-xl text-gray-600">
-                    Une solution moderne pour optimiser vos stratégies et opportunités sur le marché.
+    <div id="lang-ar-wrapper" class="hidden">
+        <header class="bg-gradient-to-r from-[#0F4C75] to-[#0077B6] text-white py-20 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-5xl mx-auto flex flex-col items-center">
+                <img src="LOGO.png" alt="CoinCarrière Logo" class="h-16 w-auto mb-8 bg-white/10 p-3 rounded-2xl backdrop-blur-md shadow-lg border border-white/10">
+                
+                <span class="text-sm tracking-widest text-[#3282B8] font-bold bg-white/10 px-4 py-1 rounded-full mb-6">
+                    منصة التوظيف
+                </span>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+                    وظّف بسرعة مع <span class="text-[#b4dc02]">أفضل الكفاءات</span>
+                </h1>
+                
+                <p class="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed mb-10">
+                    وفّر الوقت واعثر على مرشحين مؤهلين بسهولة.
                 </p>
-            </div>
 
-            <div class="flex justify-center items-center">
-                <div class="w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-2xl border-2 border-[#b4dc02]/20">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        src="https://app.heygen.com/embeds/f8f7b2201d8b4bedb26edc265cef43ab" 
-                        title="Lecteur vidéo HeyGen" 
-                        frameborder="0" 
-                        allow="encrypted-media; fullscreen;" 
-                        allowfullscreen
-                        class="w-full h-full object-cover">
-                    </iframe>
+                <div>
+                    <a href="https://coincarriere.com/register?type=company" 
+                       onclick="fbq('track', 'Lead');"
+                       class="px-10 py-5 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0F4C75] font-extrabold text-lg rounded-2xl shadow-[0_20px_50px_rgba(180,220,2,0.3)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                        ابدأ الآن
+                    </a>
                 </div>
             </div>
-            
-        </div>
-    </section>
+        </header>
 
-    <section class="py-16 bg-[#0077B6] text-white text-center">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="text-4xl sm:text-5xl font-extrabold text-[#b4dc02] mb-2">+451</div>
-                    <p class="text-gray-100 text-sm tracking-wide">Entreprises partenaires</p>
-                </div>
-                <div>
-                    <div class="text-4xl sm:text-5xl font-extrabold text-[#b4dc02] mb-2">98%</div>
-                    <p class="text-gray-100 text-sm tracking-wide">Taux de satisfaction</p>
-                </div>
-                <div>
-                    <div class="text-4xl sm:text-5xl font-extrabold text-[#b4dc02] mb-2">10 j</div>
-                    <p class="text-gray-100 text-sm tracking-wide">Délai de recrutement moyen</p>
-                </div>
-                <div>
-                    <div class="text-4xl sm:text-5xl font-extrabold text-[#b4dc02] mb-2">+3K</div>
-                    <p class="text-gray-100 text-sm tracking-wide">Talents qualifiés</p>
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 mb-6">
+                    التوظيف في قطاع العقارات أصبح تحدياً معقداً
+                </h2>
+                <p class="text-lg text-gray-500 max-w-3xl mx-auto mb-16 leading-relaxed">
+                    الطرق التقليدية بطيئة وتجذب العديد من المتقدمين غير المؤهلين، مما يكلف الشركات الكثير من الوقت والمال.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm text-right">
+                        <div class="w-12 h-12 bg-red-500/10 text-red-500 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">✕</div>
+                        <h3 class="text-xl font-bold mb-3">عمليات تستغرق وقتاً طويلاً</h3>
+                        <p class="text-gray-500 leading-relaxed">فرز مئات السير الذاتية غير المناسبة يضيع ساعات ثمينة من وقت فريق الموارد البشرية.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm text-right">
+                        <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">✕</div>
+                        <h3 class="text-xl font-bold mb-3">كفاءات غير مؤهلة</h3>
+                        <p class="text-gray-500 leading-relaxed">نقص المهارات المتخصصة في السوق المغربي، خاصة في قطاع العقارات.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm text-right">
+                        <div class="w-12 h-12 bg-blue-500/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">✕</div>
+                        <h3 class="text-xl font-bold mb-3">تكاليف مرتفعة</h3>
+                        <p class="text-gray-500 leading-relaxed">الحلول التقليدية مكلفة مقابل نتائج توظيف غالباً ما تكون متواضعة.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-20 bg-gray-50 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">Prêt à propulser vos recrutements ?</h2>
-            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">
-                Rejoignez gratuitement la première plateforme dédiée à l'immobilier au Maroc et commencez à recevoir des candidatures qualifiées dès aujourd'hui.
-            </p>
-            <a href="https://coincarriere.com/register?type=company" 
-               onclick="fbq('track', 'Lead');"
-               class="px-8 py-4 bg-[#0077B6] hover:bg-[#005f96] text-white font-bold text-lg rounded-xl shadow-2xl transition inline-block">
-                Rejoindre la plateforme
-            </a>
-        </div>
-    </section>
+        <section class="py-20 bg-[#0F4C75] text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl font-extrabold tracking-tight mb-6 leading-tight">
+                        الحل الواضح: <br>
+                        <span class="text-[#b4dc02]">كوين كاريير</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        تجمع المنصة أفضل الكفاءات وتربط المدراء بمسؤولي العقارات والخبراء الذين يحتاجون إليهم. طريقة بسيطة ومباشرة تركز على النتائج.
+                    </p>
+                    <a href="https://coincarriere.com/register?type=company" 
+                       onclick="fbq('track', 'Lead');"
+                       class="px-8 py-4 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0F4C75] font-extrabold text-base rounded-xl shadow-2xl transition-all duration-300 inline-block">
+                        احجز عرض توضيحي
+                    </a>
+                </div>
+                <div class="order-1 lg:order-2 bg-[#3282B8]/20 border border-[#3282B8]/30 p-10 rounded-3xl backdrop-blur-sm">
+                    <p class="text-2xl font-extrabold mb-6">نتائجك في تصاعد</p>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-center gap-3 justify-end">✓ استهداف جغرافي دقيق في المغرب</li>
+                        <li class="flex items-center gap-3 justify-end">✓ تكامل مع ميتا بيكسل للتتبع</li>
+                        <li class="flex items-center gap-3 justify-end">✓ تواصل مخصص لقطاع العقارات</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <footer class="bg-white border-t border-gray-100 py-12 text-center text-sm text-gray-400">
-        <p>&copy; 2026 CoinCarrière. Tous droits réservés.</p>
-    </footer>
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                        الخصائص الأساسية
+                    </h2>
+                    <p class="text-lg text-gray-500">أدوات مصممة خصيصاً للمحترفين في القطاع العقاري.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition text-right">
+                        <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">01</div>
+                        <h3 class="text-xl font-bold mb-3">السوق المستهدف في المغرب</h3>
+                        <p class="text-gray-500 leading-relaxed">حضور قوي في المدن الكبرى: الدار البيضاء، الرباط، مراكش، وفاس.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition text-right">
+                        <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">02</div>
+                        <h3 class="text-xl font-bold mb-3">تتبع الإعلانات</h3>
+                        <p class="text-gray-500 leading-relaxed">تكامل مع ميتا بيكسل لقياس التحويلات وتحسين الحملات الإعلانية.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition text-right">
+                        <div class="w-12 h-12 bg-[#0077B6]/10 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">03</div>
+                        <h3 class="text-xl font-bold mb-3">مسارات استراتيجية</h3>
+                        <p class="text-gray-500 leading-relaxed">مسار منظم لجذب الكفاءات المناسبة بسهولة.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition text-right">
+                        <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">04</div>
+                        <h3 class="text-xl font-bold mb-3">كتابة إعلانية مقنعة</h3>
+                        <p class="text-gray-500 leading-relaxed">إعلانات مصممة لجذب وتحويل أفضل الخبراء في المجال.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition text-right">
+                        <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">05</div>
+                        <h3 class="text-xl font-bold mb-3">واجهة راقية</h3>
+                        <p class="text-gray-500 leading-relaxed">تصميم أنيق يعكس جودة واحترافية علامتك التجارية.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition text-right">
+                        <div class="w-12 h-12 bg-[#b4dc02]/20 text-[#0077B6] rounded-2xl flex items-center justify-center font-bold text-xl mb-6 ml-auto">06</div>
+                        <h3 class="text-xl font-bold mb-3">دعم الموارد البشرية</h3>
+                        <p class="text-gray-500 leading-relaxed">دعم مخصص لإعداد ومتابعة إعلانات العمل الخاصة بك.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                        كيف تعمل المنصة
+                    </h2>
+                    <p class="text-lg text-gray-500">عملية مباشرة وبسيطة من ثلاث خطوات.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#0077B6] transition text-right">
+                        <span class="text-sm font-extrabold text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-lg">الخطوة 1</span>
+                        <h3 class="text-xl font-bold mt-6 mb-3">نشر الإعلان</h3>
+                        <p class="text-gray-500 leading-relaxed">انشر إعلان الوظيفة الخاص بك ببضع نقرات.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#0077B6] transition text-right">
+                        <span class="text-sm font-extrabold text-[#0077B6] bg-[#0077B6]/10 px-3 py-1 rounded-lg">الخطوة 2</span>
+                        <h3 class="text-xl font-bold mt-6 mb-3">الاستقبال والتقييم</h3>
+                        <p class="text-gray-500 leading-relaxed">استقبل طلبات المرشحين وقيم كفاءاتهم بدقة.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-[#b4dc02] transition text-right">
+                        <span class="text-sm font-extrabold text-[#0077B6] bg-[#b4dc02]/20 px-3 py-1 rounded-lg">الخطوة 3</span>
+                        <h3 class="text-xl font-bold mt-6 mb-3">التوظيف</h3>
+                        <p class="text-gray-500 leading-relaxed">وظّف المرشح المثالي لشركتك.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+                        نهجنا في العمل
+                    </h2>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                        اكتشف كيف نساعد مسؤولي التوظيف في قطاع العقارات.
+                    </p>
+                </div>
+
+                <div class="flex justify-center mb-20">
+                    <div class="w-full max-w-4xl aspect-video rounded-3xl overflow-hidden shadow-[0_20px_60px_-10px_rgba(0,0,0,0.15)] border-2 border-emerald-500/10">
+                        <iframe 
+                            width="100%" 
+                            height="100%" 
+                            src="https://app.heygen.com/embeds/f8f7b2201d8b4bedb26edc265cef43ab" 
+                            title="Présentation CoinCarrière" 
+                            frameborder="0" 
+                            allow="encrypted-media; fullscreen;" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="max-w-3xl mx-auto text-center p-10 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm">
+                    <p class="text-xl md:text-2xl font-medium text-gray-900 leading-relaxed mb-8">
+                        "مكّننا كوين كاريير من تقليل الوقت اللازم لتوظيف مدراء وكالات بالدار البيضاء إلى النصف. الاستهداف دقيق وممتاز."
+                    </p>
+                    <div class="font-bold text-[#0F4C75] text-lg">مليكة بناني</div>
+                    <div class="text-sm text-gray-400 mt-1">مستشارة أولى</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-r from-[#0077B6] to-[#0F4C75] text-white text-center px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    هل أنت مستعد لدعم <br> عمليات التوظيف الخاصة بك؟
+                </h2>
+                <p class="text-xl text-gray-200 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    انضم اليوم للشركات التي تثق في منصتنا لبناء فرق العمل في المغرب.
+                </p>
+                <a href="https://coincarriere.com/register?type=company" 
+                   onclick="fbq('track', 'Lead');"
+                   class="px-10 py-6 bg-[#b4dc02] hover:bg-[#a3c702] text-[#0F4C75] font-extrabold text-lg rounded-2xl shadow-[0_20px_50px_rgba(180,220,2,0.3)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                    ابدأ الآن
+                </a>
+            </div>
+        </section>
+
+        <footer class="bg-gray-50 border-t border-gray-100 py-12 text-center text-sm text-gray-400">
+            <p>&copy; 2026 كوين كاريير. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const btnFr = document.getElementById('btn-fr');
+            const btnAr = document.getElementById('btn-ar');
+            const wrapperFr = document.getElementById('lang-fr-wrapper');
+            const wrapperAr = document.getElementById('lang-ar-wrapper');
+            const body = document.getElementById('page-body');
+
+            if (lang === 'ar') {
+                // Show Arabic
+                wrapperFr.classList.add('hidden');
+                wrapperAr.classList.remove('hidden');
+                body.setAttribute('dir', 'rtl');
+                
+                // Style button
+                btnAr.className = "px-3 py-1.5 text-sm font-semibold rounded-lg bg-[#0077B6] text-white shadow-sm transition";
+                btnFr.className = "px-3 py-1.5 text-sm font-semibold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition";
+            } else {
+                // Show French
+                wrapperAr.classList.add('hidden');
+                wrapperFr.classList.remove('hidden');
+                body.setAttribute('dir', 'ltr');
+                
+                // Style button
+                btnFr.className = "px-3 py-1.5 text-sm font-semibold rounded-lg bg-[#0077B6] text-white shadow-sm transition";
+                btnAr.className = "px-3 py-1.5 text-sm font-semibold rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition";
+            }
+        }
+    </script>
 </body>
 </html>
